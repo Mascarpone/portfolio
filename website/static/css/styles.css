@@ -1,0 +1,402 @@
+/************** fonts **************/
+
+@font-face {
+  font-family: blacksword;
+  src: url(../fonts/Blacksword.otf);
+}
+
+@font-face {
+  font-family: caviar;
+  src: url(../fonts/CaviarDreams_Bold.ttf);
+}
+
+/************** main **************/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/************** title **************/
+
+#title-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 2px 0;
+}
+
+#title-container #text {
+  position: absolute;
+  top: 4px;
+  width: 35px;
+  color: #262626;
+  text-align: center;
+  font-family: blacksword, Arial, sans-serif;
+  font-size: 200%;
+  padding: 8px;
+}
+
+#title-container #text a {
+  text-decoration: none;
+  color: #262626;
+}
+
+#title-container #halfclip {
+    width: 50%;
+    height: 100%;
+    right: 0px;
+    position: absolute;
+    overflow: hidden;
+    transform-origin: left center;
+    animation: clipderotate 0.25s 1;
+}
+
+#title-container:hover #halfclip {
+    animation: cliprotate 0.25s 1;
+    transform: rotate(180deg);
+} 
+
+#title-container .halfcircle {
+  box-sizing: border-box;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 1.5px transparent;
+  border-top-color: #262626;
+  border-left-color: #262626;
+  border-radius: 50%;
+}
+
+#title-container #clipped {
+    width: 200%;
+    transform: rotate(-45deg);
+    animation: derotate 0.125s linear 2;
+}
+#title-container:hover #clipped {
+    transform: rotate(135deg);
+    animation: rotate 0.125s linear 2;
+}
+
+#title-container #fixed {
+  width: 100%;
+  transform: rotate(135deg);  
+  opacity: 0;
+  animation: deshowfixed 0.25s 1;
+}
+
+#title-container:hover #fixed {
+  opacity: 1;
+  animation: showfixed 0.25s 1;
+}
+
+/************** navbar **************/
+
+ul#navbar {
+  list-style: none;
+  text-align: center;
+  font-family: caviar;
+  font-size: 120%;
+  margin: 0.5em;
+  padding: 0;
+}
+
+ul#navbar li {
+  float: left;
+  list-style: none;
+  padding: 0.8em 1em;
+}
+
+ul#navbar li a {
+  position: relative;
+  line-height: 1.5em;
+  text-decoration: none;
+  color: #262626;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+ul#navbar li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #262626;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+ul#navbar li.active a:before, 
+ul#navbar li.active a:hover:before,
+ul#navbar li a:hover:before {
+  right: 80%;
+}
+
+ul#navbar li.active a.exiting:before {
+  right:100%;
+}
+
+/* colors */
+ul#navbar li a.education:before { background-color: #3c9724;}
+ul#navbar li a.resume:before { background-color: #ffb94b;}
+ul#navbar li a.contact:before { background-color: #45b0c2;}
+
+hr {
+  border: 0; 
+  height: 1px; 
+  background: #333; 
+  background-image: linear-gradient(to right, #333, #ccc, #ccc);
+}
+
+/************** footer **************/
+
+#footer {
+  padding: 10px 0px 0px 0px;
+  color: #f3f3f3;
+  margin-top: 25px;
+  background-color: #282828;
+  bottom: 0;
+  width: 100%
+  border-top: solid 1px #262626;
+}
+
+#footer-image {
+  height: 45px;
+}
+
+/************** index **************/
+
+#index-title {
+  position: absolute;
+  font-family: blacksword, Arial, sans-serif;
+  font-size: 400%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+img#index-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+ul#index-navbar {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  font-family: caviar;
+  font-size: 120%;
+}
+
+ul#index-navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #262626;
+}
+
+ul#index-navbar a:hover {
+  color: #262626;
+}
+
+ul#index-navbar a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #262626;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ul#index-navbar a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+ul#index-navbar li {
+  display: inline;
+  padding: 15px;
+}
+
+/************** education **************/
+
+.line { 
+  border-top: 1px solid #333; 
+  display: block; 
+  margin-top: 60px; 
+  padding-top: 50px; 
+  position: relative; 
+}
+
+.education-title { 
+  display: block;  
+  position: absolute; 
+  bottom: 0px; 
+  left: 50%; 
+  margin: -50px 0 0 -50px;
+  
+  height: 100px; 
+  width: 100px; 
+  border-radius: 50%; 
+  border: 10px solid #fff;
+  background: #262626;
+  
+  color: #fff; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 13px; 
+  text-align: center; 
+  text-transform: uppercase; 
+  line-height: 82px;
+}
+
+
+/************** contact **************/
+
+.vertical-bar {
+  position: absolute;
+  border: 0;
+  width: 2px;
+  height: 300px; 
+  background: #eee; 
+  background-image: linear-gradient(to bottom, #eee, #ccc, #eee);
+  margin: 2em 4em;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-submit {
+  margin-top: 1em;
+  float: right;
+}
+
+#contact-infos {
+  margin-left: 10em;
+}
+
+#contact-infos #title {
+  font-weight: bold;
+}
+
+#contact-infos label {
+  font-style: italic;
+  font-weight: normal;
+}
+
+#contact-infos .content {
+  text-align: center;
+  font-size: 14px;
+}
+
+#contact-infos .e-mail {
+   display: block;
+   width: 180px;
+   margin: 0 auto;
+}
+
+#contact-infos .e-mail:before {
+  content: attr(data-website) "\0040" attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.social { margin: 2em 7.2em; }
+.social ul { list-style: none; }
+.social a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.social li span.name { position: absolute; line-height: 50px; color: #262626; font-size: 16px; }
+.social li { margin-bottom: 10px; }
+.social li.circle { 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  text-align: center;
+  
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.social li.circle.fb-icon { background-color: #3b5998; font-size: 1em; line-height: 60px;}
+.social li.circle.fb-icon span.name { margin-left: 3em; }
+.social li.circle.git-icon { background-color: #4078c0; font-size: 1.5em; line-height: 65px;}
+.social li.circle.git-icon span.name { margin-left: 2.4em; }
+.social li.circle.gplus-icon { background-color: #db4437; font-size: 1em; line-height: 60px;}
+.social li.circle.gplus-icon span.name { margin-left: 2.4em; }
+
+.social li.circle:hover {
+  background-color: #ee6eba; 
+  text-decoration: none;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+/************** responsive handlers **************/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 768px) { 
+  #index-title { font-size: 220%; }
+  #index-navbar { font-size: 80%; top: 60px; }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  #index-title { font-size: 220%; }
+  #index-navbar { font-size: 90%; top: 60px; }
+  img#index-image { max-width: 80%; }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #index-title { font-size: 300%; }
+  #index-navbar { font-size: 100%; top: 80px; }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #index-title { font-size: 400%; }
+  #index-navbar { font-size: 120%; top: 100px; }
+}

@@ -1,0 +1,65 @@
+{% extends template %}
+{% block title %}Contact{% endblock %}
+
+{% set social_list = [
+  ('#', 'fa fa-facebook fa-2x', 'fb-icon', 'Facebook'),
+  ('#', 'fa fa-github fa-2x', 'git-icon', 'GitHub'),
+  ('#', 'fa fa-google-plus fa-2x', 'gplus-icon', 'Google+')
+  ] -%}
+
+{% block content %}
+
+<div class="row">
+  
+  <div class="col-md-6" id="contact-form">
+    
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Firstname Surname">
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="object">Object</label>
+        <input type="text" class="form-control" id="object" placeholder="Object">
+      </div>
+      <textarea class="form-control" rows="5"></textarea>
+      <button type="submit" class="btn btn-warning btn-lg btn-submit">Submit</button>
+    </form>
+    
+  </div>
+  
+  <div class="col-md-6" id="infos">
+    
+    <div class="vertical-bar"></div>
+    
+    <div id="contact-infos">
+      <span id="title">Informations</span>
+      <br />
+      <label>Address</label>
+      <div class="content">4-4-6 Tarumachi, Kohoku-ku<br /> Yokohama, Kanagawa, 222-0001 <br /> JAPAN</div>
+      <label>E-mail</label>
+      <span class="e-mail" data-user="ten.nairolf.nrevel" data-website="moc.liamg"></span>
+    </div>
+    
+    <div class="social">
+      <ul>
+        {% for url, icon, style, name in social_list %}
+        <a target="_blank" href="{{ url|e }}">
+          <li class="{{ style|e }} circle">
+            <i class="{{ icon|e }}"></i>
+            <span class="name">{{ name|e }}</span>
+          </li>    
+        </a>
+        {% endfor %}
+      </ul>
+      
+    </div>
+  </div>
+  
+</div>
+
+{% endblock %}
