@@ -14,6 +14,9 @@ $(function(){
             smoothState.restartCSSAnimations();
             // Reverse default navbar animation before changing the page
             $("ul#navbar li.active a").toggleClass("exiting");
+            // Change the css of the body for affix in Education page
+            if ({{ body }}) { $("body").css("position", "relative"); }
+            else { $("body").css("position", ""); }
           }
         },
         onReady: {

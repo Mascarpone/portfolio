@@ -16,7 +16,7 @@ def index():
 
 @app.route("/education")
 def education():
-    return render_template('education.html')
+    return render_template('education.html', body=True)
 
 @app.route("/resume")
 def resume():

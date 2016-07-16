@@ -283,7 +283,6 @@ ul#index-navbar li {
   line-height: 82px;
 }
 
-
 /************** contact **************/
 
 .vertical-bar {
@@ -365,7 +364,7 @@ textarea {
 .social li.circle.gplus-icon span.name { margin-left: 2.4em; }
 
 .social li.circle:hover {
-  background-color: #ee6eba; 
+  background-color: #58c53a; 
   text-decoration: none;
   -webkit-transition: background-color 300ms;
   -moz-transition: background-color 300ms;
