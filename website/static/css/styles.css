@@ -283,6 +283,72 @@ ul#index-navbar li {
   line-height: 82px;
 }
 
+.affix {
+  top: 20px;
+}
+
+.nav-pills { 
+  margin-top: 0;
+  margin-left: 20px;
+}
+.nav-pills > li > a { 
+  position: relative;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px; 
+  font-weight: 500;
+  color: #767676; 
+  padding: 4px 20px; 
+  border-radius: 0; 
+}
+.nav-pills > li > a:hover { 
+  color: #58b93e; 
+  background-color: transparent; 
+  border-left: 1px solid #58b93e; 
+  padding-left: 19px;
+}
+.nav-pills > li.active > a { 
+  color: #48aa2e; 
+  font-weight: 700;
+  background-color: transparent; 
+  border-left: 2px solid #48aa2e;
+  padding-left: 18px;
+}
+.nav-pills > li.active > a:hover {
+  background-color: transparent;
+  color: #48aa2e;
+  font-weight: 700;
+}
+
+.sublist {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.sublist > li > a {
+  font-size: 12px; 
+  font-weight: 400;
+  color: #767676; 
+  text-decoration: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+}
+.sublist > li > a:hover { 
+  color: #58b93e; 
+  border-left: 1px solid #58b93e; 
+  padding-left: 29px;
+}
+.sublist > li.active > a { 
+  color: #48aa2e; 
+  font-weight: 500;
+  border-left: 2px solid #48aa2e;
+  padding-left: 28px;
+}
+.sublist > li.active > a:hover {
+  color: #48aa2e;
+}
+
 /************** contact **************/
 
 .vertical-bar {
@@ -364,7 +430,7 @@ textarea {
 .social li.circle.gplus-icon span.name { margin-left: 2.4em; }
 
 .social li.circle:hover {
-  background-color: #58c53a; 
+  background-color: #48aa2e; 
   text-decoration: none;
   -webkit-transition: background-color 300ms;
   -moz-transition: background-color 300ms;
