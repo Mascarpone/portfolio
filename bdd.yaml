@@ -1,0 +1,24 @@
+Schools:
+  - name: ENSEIRB-MATMECA
+    date: 2014 - now
+    img: enseirb.jpeg
+    summary: résumé
+    description: description
+    grades:
+    - period: semester 5
+      gradesfile: notesS5.txt
+    projects:
+      - project1
+     
+Projects:
+  - name: project1
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: link caption
+        url: link url
+    comment: commentaire
+    screenshots:
+      - img1.png

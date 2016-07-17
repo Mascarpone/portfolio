@@ -289,7 +289,7 @@ ul#index-navbar li {
 
 .nav-pills { 
   margin-top: 0;
-  margin-left: 20px;
+  margin-left: 0;
 }
 .nav-pills > li > a { 
   position: relative;

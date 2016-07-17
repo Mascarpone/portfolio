@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from website import app
 from flask import render_template
+from website.models.default import model
 
 @app.context_processor
 def config_template():
@@ -16,7 +17,11 @@ def index():
 
 @app.route("/education")
 def education():
-    return render_template('education.html', body=True)
+    schools = model.getSchools()
+    schoolsnames = model.getSchoolsNames()
+    projects = model.getProjects()
+    projectsnames = model.getProjectsNames()
+    return render_template('education.html', schools=schools, schoolsnames=schoolsnames, projects=projects, projectsnames=projectsnames)
 
 @app.route("/resume")
 def resume():
