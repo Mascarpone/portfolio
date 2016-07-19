@@ -4,12 +4,13 @@ My portfolio website
 
 ## TODO
 
+- style education
 - captcha google pour l'envoi du formulaire
 - completer l'exécution du formulaire sécurisée
-- bdd education
-- style education
 - resume
-- responsive
+- remplir bdd education
+
+- compléter mon profil google+, facebook, github
 
 - BONUS: jolie page 404
 - BONUS: augmenter les miniatures des screenshots
