@@ -42,6 +42,7 @@ html {
 #title-container #text {
   position: absolute;
   top: 4px;
+  left: -2px;
   width: 35px;
   color: #262626;
   text-align: center;
@@ -50,7 +51,8 @@ html {
   padding: 8px;
 }
 
-#title-container #text a {
+#title-container a {
+  display: block;
   text-decoration: none;
   color: #262626;
 }
@@ -191,7 +193,7 @@ hr {
 /************** index **************/
 
 #index-title {
-  position: absolute;
+  /* position: absolute; */
   font-family: blacksword, Arial, sans-serif;
   font-size: 400%;
   width: 100%;
@@ -204,13 +206,14 @@ img#index-image {
   position: absolute;
   z-index: -1;
   top: 0;
+  left: 0;
   max-width: 95%;
   max-height: 95%;
 }
 
 ul#index-navbar {
   position: relative;
-  top: 100px;
+  top: 0;
   text-align: center;
   font-family: caviar;
   font-size: 120%;
@@ -283,6 +286,10 @@ ul#index-navbar li {
   line-height: 82px;
 }
 
+.affix-top {
+  min-width:144px;
+}
+
 .affix {
   top: 20px;
 }
@@ -339,26 +346,134 @@ ul#index-navbar li {
   border-left: 1px solid #58b93e; 
   padding-left: 29px;
 }
-.sublist > li.active > a { 
+.sublist > li.active > a,
+.sublist > li.active2 > a { 
   color: #48aa2e; 
   font-weight: 500;
   border-left: 2px solid #48aa2e;
   padding-left: 28px;
 }
-.sublist > li.active > a:hover {
+.sublist > li.active > a:hover,
+.sublist > li.active2 > a:hover {
   color: #48aa2e;
+}
+
+ul#school-list {
+  text-align: center;
+  margin: 15px 0;
+}
+ul#school-list > li {
+  position: relative;
+  text-align: left;
+  margin: 5px;
+  color: #fff;
+  width: 284px;
+  height: 310px;
+}
+ul#school-list > li .front:hover {
+  cursor: pointer;
+}
+ul#school-list > li .front:hover:before {
+  border-width: 0 26px 26px 0;
+}
+ul#school-list > li .front:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  -webkit-transition: border-width 0.25s ease-out;
+  -moz-transition: border-width 0.25s ease-out;
+  -o-transition: border-width 0.25s ease-out;
+  transition: border-width 0.25s ease-out;
+  border-style: solid;
+  border-color: #fff #fff #947cc6 #947cc6;
+  background: #947cc6;
+  -webkit-box-shadow: 0 1px 0px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 0px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 0px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  /* Firefox 3.0 damage limitation */
+  display: block; width: 0;
+}
+ul#school-list > li .front {
+  position: relative;
+  background-color: #6f54a7;
+  padding: 1em 1.5em; 
+  transition: background-color 0.2s ease;
+}
+ul#school-list > li .back:hover {
+  cursor: pointer;
+}
+ul#school-list > li .back:hover:before {
+  border-width: 26px 26px 0 0;
+}
+ul#school-list > li .back:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 16px 16px 0px 0px;
+  -webkit-transition: border-width 0.25s ease-out;
+  -moz-transition: border-width 0.25s ease-out;
+  -o-transition: border-width 0.25s ease-out;
+  transition: border-width 0.25s ease-out;
+  border-style: solid;
+  border-color: #fff #947cc6 #947cc6 #947cc6;
+  display: block; width: 0;
+}
+ul#school-list > li .back {
+  position: relative;
+  background-color: #947cc6;
+  padding: 1.5em 1.5em; 
+}
+
+
+ul#school-list > li .school-period {
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+ul#school-list > li .school-title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+ul#school-list > li .school-img {
+  width: 243px;
+  height: 150px;
+  border: 1px solid #fff;
+  margin: 2px 0;
+}
+ul#school-list > li .school-summary {
+  font-size: 11px;
+  height: 70px;
+}
+ul#school-list > li .showmore-button {
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: right;
+}
+ul#school-list > li .showmore-button > i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+ul#school-list > li .showmore-button:hover {
+  text-decoration: none;
+}
+ul#school-list > li .school-description {
+  font-size: 12px;
+  height: 170px;
 }
 
 /************** contact **************/
 
 .vertical-bar {
-  position: absolute;
   border: 0;
   width: 2px;
   height: 300px; 
   background: #eee; 
   background-image: linear-gradient(to bottom, #eee, #ccc, #eee);
-  margin: 2em 4em;
+  margin: auto;
 }
 
 textarea {
@@ -368,10 +483,6 @@ textarea {
 .btn-submit {
   margin-top: 1em;
   float: right;
-}
-
-#contact-infos {
-  margin-left: 10em;
 }
 
 #contact-infos #title {
@@ -400,7 +511,7 @@ textarea {
   direction: rtl;
 }
 
-.social { margin: 2em 7.2em; }
+.social { margin: 2em 0; }
 .social ul { list-style: none; }
 .social a {
   display: block;
@@ -424,7 +535,8 @@ textarea {
 
 .social li.circle.fb-icon { background-color: #3b5998; font-size: 1em; line-height: 60px;}
 .social li.circle.fb-icon span.name { margin-left: 3em; }
-.social li.circle.git-icon { background-color: #4078c0; font-size: 1.5em; line-height: 65px;}
+.social li.circle.git-icon { background-color: #4078c0; font-size: 1.5em; line-height: 65px; }
+.social li.circle.git-icon i { padding-left: 1px; }
 .social li.circle.git-icon span.name { margin-left: 2.4em; }
 .social li.circle.gplus-icon { background-color: #db4437; font-size: 1em; line-height: 60px;}
 .social li.circle.gplus-icon span.name { margin-left: 2.4em; }
@@ -442,26 +554,55 @@ textarea {
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
-@media (max-width: 768px) { 
-  #index-title { font-size: 220%; }
-  #index-navbar { font-size: 80%; top: 60px; }
+@media (max-width: 400px) {
+  #title-container { width: 40px; height: 40px; margin: 2px 0 0 0; }
+  #title-container #text { font-size: 120%; top: 1px; left: -3px; }
+  #index-title { font-size: 110%; padding: 10px 0 0 0; } 
+  ul#index-navbar li { padding: 0 5px; }
+  #index-navbar a { font-size: 55%; } 
+}
+
+@media (min-width: 400px) {
+  ul#navbar { font-size: 100%; margin: 0; }
+  #title-container { width: 40px; height: 40px; margin: 2px 0 0 0; }
+  #title-container #text { font-size: 120%; top: 1px; left: -3px; }
+  #index-title { font-size: 110%; padding: 10px 0 0 0; } 
+  ul#index-navbar { top: 0; }
+  ul#index-navbar li { padding: 0 5px; }
+  #index-navbar a { font-size: 55%; } 
+}
+
+@media (min-width: 500px) { 
+  ul#navbar { font-size: 120%; margin: 0.5em; }
+  #title-container { width: 60px; height: 60px; margin: 2px 0; }
+  #title-container #text { font-size: 200%; top: 4px; left: -2px; }
+  #index-title { font-size: 180%; } 
+  #index-navbar a { font-size: 80%; } 
+  ul#index-navbar { top: 0; }
+  ul#index-navbar li { padding: 15px; }
+  #infos { margin-top: 20px; }
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   #index-title { font-size: 220%; }
-  #index-navbar { font-size: 90%; top: 60px; }
+  #index-navbar a { font-size: 90%; }
   img#index-image { max-width: 80%; }
+  ul#index-navbar { top: 10px; }
+  ul#index-navbar li { padding: 25px; }
+  #infos { margin-top: 0; }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #index-title { font-size: 300%; }
-  #index-navbar { font-size: 100%; top: 80px; }
+  #index-navbar a { font-size: 100%; }
+  ul#index-navbar { top: 20px; }
+  ul#index-navbar li { padding: 35px; }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   #index-title { font-size: 400%; }
-  #index-navbar { font-size: 120%; top: 100px; }
+  #index-navbar a { font-size: 120%; }
 }

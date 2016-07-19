@@ -1,7 +1,8 @@
 Schools:
+  
   - name: ENSEIRB-MATMECA
     date: 2014 - now
-    img: enseirb.jpeg
+    img: enseirb.jpg
     summary: résumé
     description: description
     grades:
@@ -9,6 +10,61 @@ Schools:
       gradesfile: notesS5.txt
     projects:
       - project1
+    color: 6f54a7
+    corner-color: 947cc6
+      
+  - name: TEST
+    date: 2014 - now
+    img: enseirb.jpg
+    summary: résumé
+    description: description
+    grades:
+    - period: semester 5
+      gradesfile: notesS5.txt
+    projects:
+      - project1
+    color: dd2f54
+    corner-color: fc7e99
+    
+  - name: TEST2
+    date: 2014 - now
+    img: enseirb.jpg
+    summary: résumé
+    description: description
+    grades:
+    - period: semester 5
+      gradesfile: notesS5.txt
+    projects:
+      - project1
+    color: ffb94b
+    corner-color: ffca78
+    
+  - name: TEST3
+    date: 2014 - now
+    img: enseirb.jpg
+    summary: résumé
+    description: description
+    grades:
+    - period: semester 5
+      gradesfile: notesS5.txt
+    projects:
+      - project1
+    color: 4c6fe0
+    corner-color: 7e9af5
+    
+  - name: TEST4
+    date: 2014 - now
+    img: enseirb.jpg
+    summary: résumé
+    description: description
+    grades:
+    - period: semester 5
+      gradesfile: notesS5.txt
+    projects:
+      - project1
+    color: 49ac2e
+    corner-color: 79d260
+ 
      
 Projects:
   - name: project1
