@@ -61,10 +61,33 @@ function schoolsAnimation() {
 
 // modal handler
 function gradesModal() { 
+  // on modal open
   $('#grades').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var school = button.data('school'); // Extract info from data-* attributes
-    $(this).find('.modal-title').text('Grades at ' + school);
+    // Button that triggered the modal
+    var button = $(event.relatedTarget); 
+    // Extract info from data-* attributes
+    var school = button.data('school'); 
+    var datagrades = button.data('grades'); // string
+    var grades = datagrades.substring(1,datagrades.length-2).split("},"); // adapt the format to be JSON like
+    $.each(grades, function(i, v) { grades[i] = v+"}" });
+    // Fill the modal
+    var modal = $(this);
+    modal.find('.modal-title').text('Grades at ' + school);
+    modal.find('.grades-body').load('grades');
+    $.each(grades, function(index, value) {
+      var obj = eval('(' + value + ')');
+      modal.find('.select-menu').append('<li data-href="' + obj['gradesfile'] + '">' + obj['period'] + '</li>');
+    });
+    // Handle the menu click
+    modal.find('.select-menu li').click(function() {
+      modal.find('.grades-body').load('grades/' + $(this).attr('data-href'));
+    });
+  });
+  
+  // on modal close
+  $('#grades').on('hide.bs.modal', function(event) {
+    // remove all added elements
+    $(this).find('.select-menu').html('');
   });
 }
 

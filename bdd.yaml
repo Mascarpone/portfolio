@@ -1,5 +1,7 @@
+---
+document: schools
+
 Schools:
-  
   - name: ENSEIRB-MATMECA
     date: 2014 - now
     img: enseirb.jpg
@@ -7,7 +9,9 @@ Schools:
     description: description
     grades:
     - period: semester 5
-      gradesfile: notesS5.txt
+      gradesfile: eirbS5
+    - period: semester 6
+      gradesfile: eirbS6
     projects:
       - project1
       - project2
@@ -74,8 +78,11 @@ Schools:
     color: 49ac2e
     corner-color: 79d260
  
-     
+--- 
+document: projects
+ 
 Projects:
+  
   - name: project1
     date: Jan 2015
     subject: sujet et contexte
@@ -87,3 +94,13 @@ Projects:
     comment: commentaire
     screenshots:
       - img1.png
+      
+---
+document: eirbS5
+
+---
+document: eirbS6
+
+
+
+   

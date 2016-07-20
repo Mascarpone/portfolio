@@ -1,0 +1,5 @@
+{% if grades %}
+  {{ grades }}
+{% else %}  
+  <img class="modal-img" src="{{ url_for('static', filename='images/modal.png') }}" />
+{% endif %}

@@ -23,6 +23,14 @@ def education():
     projectsnames = model.getProjectsNames()
     return render_template('education.html', schools=schools, schoolsnames=schoolsnames, projects=projects, projectsnames=projectsnames)
 
+@app.route("/grades")
+@app.route("/grades/<filename>")
+def grades(filename=None):
+    if filename is None:
+        return render_template('grades.html')
+    grades = model.getDocument(filename)
+    return render_template('grades.html', grades=grades)
+
 @app.route("/resume")
 def resume():
     return render_template('resume.html')
