@@ -370,9 +370,6 @@ ul#school-list > li {
   width: 284px;
   height: 310px;
 }
-ul#school-list > li .front:hover {
-  cursor: pointer;
-}
 ul#school-list > li .front:hover:before {
   border-width: 0 26px 26px 0;
 }
@@ -400,9 +397,6 @@ ul#school-list > li .front {
   background-color: #6f54a7;
   padding: 1em 1.5em; 
   transition: background-color 0.2s ease;
-}
-ul#school-list > li .back:hover {
-  cursor: pointer;
 }
 ul#school-list > li .back:hover:before {
   border-width: 26px 26px 0 0;
@@ -446,12 +440,14 @@ ul#school-list > li .school-img {
 }
 ul#school-list > li .school-summary {
   font-size: 11px;
-  height: 70px;
+  height: 20%;
 }
 ul#school-list > li .showmore-button {
+  position: absolute;
+  bottom: 5%;
+  right: 7%;
   font-size: 14px;
   text-decoration: underline;
-  text-align: right;
 }
 ul#school-list > li .showmore-button > i {
   font-size: 12px;
@@ -459,11 +455,23 @@ ul#school-list > li .showmore-button > i {
 }
 ul#school-list > li .showmore-button:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 ul#school-list > li .school-description {
   font-size: 12px;
-  height: 170px;
+  height: 55%;
 }
+
+ul#school-list > li .school-results { font-weight: 600; }
+
+ul#school-list > li .school-projects { margin-top: -5px; }
+ul#school-list > li .school-projects > span { font-size: 12px; font-weight: 600; }
+ul#school-list > li .school-projects > ul { margin: 0; }
+ul#school-list > li .school-projects > ul > li.nopoint:before { content: ""; }
+ul#school-list > li .school-projects > ul > li:before { content: ". "; color: #fff; }
+ul#school-list > li .school-projects > ul > li { padding: 0; margin: 0; }
+ul#school-list > li .school-projects > ul > li > a { font-size: 10px; color: #fff; text-decoration: underline; }
+ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none; }
 
 /************** contact **************/
 

@@ -43,10 +43,21 @@ function konamiCode() {
 // education schools animation
 function schoolsAnimation() {
   $("ul#school-list > li").each(function() {
-    $(this).flip();
+    var elem = $(this);
+    elem.flip({ trigger: 'manual' });
+    elem.find(".showmore-button").each(function() {
+      $(this).click(function() { elem.flip('toggle'); });
+    });
   });
-  
-  $('#card').flip();
+}
+
+// modal handler
+function gradesModal() { 
+  $('#grades').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var school = button.data('school'); // Extract info from data-* attributes
+    $(this).find('.modal-title').text('Grades at ' + school);
+  });
 }
 
 // scrollspy handler
@@ -75,6 +86,7 @@ function ready() {
   schoolsAnimation();
   scrollspyHandler();
   konamiCode();
+  gradesModal();
 }
 
 
