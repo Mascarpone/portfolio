@@ -49,6 +49,14 @@ function schoolsAnimation() {
       $(this).click(function() { elem.flip('toggle'); });
     });
   });
+  
+  // escape key down closes everything
+  $('body').keydown(function(e) {
+    // ESCAPE key pressed
+    if(e.keyCode == 27) {
+        $("ul#school-list > li").flip(false);
+    }
+  });
 }
 
 // modal handler
