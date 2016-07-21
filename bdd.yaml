@@ -89,9 +89,32 @@ Projects:
     objectives: 
       - objectif1
     links:
-      - caption: link caption
-        url: link url
-    comment: commentaire
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - img1.png
+      - front.png
+      
+  - name: project2
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - img1.png
+      
+  - name: project3
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+      - objectif2
+    links:
+      - caption: google
+        url: http://www.google.com/
     screenshots:
       - img1.png
       

@@ -482,6 +482,20 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 .modal .grades-body { margin: 0.5em 0; }
 .modal .modal-img { margin-left: 2em; }
 
+#projects-list { list-style: none; padding: 0 1em; }
+.project-container { margin: 1em 0 4em 0; font-size: 14px; }
+.project-container .project-title { font-size: 25px; font-weight: 500; position: relative; }
+.project-container .project-title .project-period { font-size: 12px; font-weight: normal; font-style: italic; position: absolute; right: 0; bottom: 0; }
+.project-container hr { margin-top: 0.5em; border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+.project-container .project-subject .project-links li:last-child:after { content: "."; }
+.project-container .project-subject .project-links li:after { content: ", "; }
+.project-container .objectives { list-style-type: disc; padding-left: 1em; }
+
+.carousel-control i { position: absolute; top: 50%; }
+.carousel-indicators li.active { background-color: #48aa2e; }
+.carousel-inner > .item > img { width: 100%; height: 200px; }
+
+
 /************** contact **************/
 
 .vertical-bar {
@@ -566,6 +580,66 @@ textarea {
   -o-transition: background-color 300ms;
   transition: background-color 300ms;
 }
+
+/************** bs callout ***************/
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
 
 /************** responsive handlers **************/
 
