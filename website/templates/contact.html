@@ -1,6 +1,18 @@
 {% extends template %}
 {% block title %}Contact{% endblock %}
 
+{% block head %}
+{{ super() }}
+<script>
+var widgetcaptcha;
+var captchaCallback = function() {
+  widgetcaptcha = grecaptcha.render('captcha', {
+    'sitekey' : '6LcrtCUTAAAAAHR5UAxnMZFwCgz8wkb5lmKhZXRO'
+  });
+};
+</script>
+{% endblock %}
+
 {% set social_list = [
   ('https://www.facebook.com/florian.levern.9', 'fa fa-facebook fa-2x', 'fb-icon', 'Facebook'),
   ('https://github.com/Mascarpone', 'fa fa-github fa-2x', 'git-icon', 'GitHub'),
@@ -13,7 +25,7 @@
   
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6" id="contact-form">
     
-    <form>
+    <form action="javascript:grecaptcha.reset(widgetcaptcha)" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" placeholder="Firstname Surname">
@@ -27,7 +39,8 @@
         <input type="text" class="form-control" id="object" placeholder="Object">
       </div>
       <textarea class="form-control" rows="5"></textarea>
-      <button type="submit" class="btn btn-warning btn-lg btn-submit">Submit</button>
+      <div class="pull-left" id="captcha"></div>
+      <button type="submit" class="btn btn-warning btn-lg btn-submit pull-right">Submit</button>
     </form>
     
   </div>

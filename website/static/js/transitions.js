@@ -1,3 +1,6 @@
+
+
+// konami code handler
 function konamiCode() {
     // a key map of allowed keys
     var allowedKeys = {
