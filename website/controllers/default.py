@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from website import app
-from flask import render_template
-from website.models.default import model
+from flask import render_template, redirect, url_for, abort, request, flash
+from website.models.education import model
+from website.models.form import ContactForm
+import requests
 
 @app.context_processor
 def config_template():
@@ -35,6 +37,18 @@ def grades(filename=None):
 def resume():
     return render_template('resume.html')
     
-@app.route("/contact")
-def contact():
-    return render_template('contact.html')
+@app.route("/contact", methods=["GET", "POST"])
+def contact(other=None): # the use of 'other' is a temporary solution for POST forms compatibility with smoothState
+    form = ContactForm()
+    if form.validate_on_submit():
+        # check the recaptcha
+        captcha_response = request.form["g-recaptcha-response"]
+        data = {'secret': '***REMOVED***', 'response': captcha_response}
+        post_response = requests.post("https://www.google.com/recaptcha/api/siteverify", data = data)
+        if post_response.json()['success'] == True:
+            # send the email
+            flash(u"Your message has been sent")
+        else:
+            flash(u"Are you a robot?")
+        return redirect(url_for('contact'))
+    return render_template('contact.html', form=form, other=other)

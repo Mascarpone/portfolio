@@ -2,11 +2,16 @@
 {% block title %}Resume{% endblock %}
 {% block content %}
 
-<div class="col-xs-offset-5 col-xs-2 resume">
+<div class="col-xs-10 resume-img">
+  <img class="noselect" src="{{ url_for('static', filename='images/cv.jpg') }}" alt="" />
+</div>
+<div class="col-xs-2 resume">
   <a target="_blank" href="{{ url_for('static', filename='images/cv.pdf') }}">
-    <i class="fa fa-file-pdf-o fa-5x" aria-hidden="true"></i>
+    <i class="fa fa-file-pdf-o fa-5x hidden-xs hidden-sm" aria-hidden="true"></i>
+    <i class="fa fa-file-pdf-o fa-4x hidden-md hidden-lg" aria-hidden="true"></i>
     <br />
-    <h4>Download</h4>
+    <h4 class="hidden-xs hidden-sm">Download</h4>
+    <h5 class="hidden-md hidden-lg">Download</h5>
   </a>
 </div>
 

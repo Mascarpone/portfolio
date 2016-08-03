@@ -4,6 +4,7 @@ from flask import Flask
 
 app = Flask('website')
 app.debug = True
+app.secret_key = 'd0ntW4tch'
 
 bdd = "***REMOVED***"
 

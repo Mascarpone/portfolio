@@ -4,19 +4,18 @@ My portfolio website
 
 ## TODO
 
-- style education
 - captcha google pour l'envoi du formulaire
 - completer l'exécution du formulaire sécurisée
 - resume
 - remplir bdd education
-
+- vérifier la compatibilité des différents navigateurs
 - compléter mon profil google+, facebook, github
+- compléter le readme
 
 - BONUS: jolie page 404
-- BONUS: augmenter les miniatures des screenshots
 - BONUS: multi langage
 - BONUS: generation automatique des données depuis le pdf/latex du cv
-- BONUS: code konami
+- BONUS: code konami -> photos de vacances en mozaique avec un morceau de la mozaique qui permet de retourner sur le site
 
 ## Version
 

@@ -1,4 +1,17 @@
-
+// display the captcha for the form
+function displayCaptcha() {
+  if ($('#captcha').length != 0 && typeof grecaptcha !== 'undefined') {
+    var verifyCallback = function(response) {
+      $('#contact-form-submit').removeClass('disabled');
+    };
+    
+    var captchaWidgetId = grecaptcha.render('captcha', {
+      'sitekey' : '6LcrtCUTAAAAAHR5UAxnMZFwCgz8wkb5lmKhZXRO', 
+      'theme' : 'light', 
+      'callback': verifyCallback
+    });
+  }
+}
 
 // konami code handler
 function konamiCode() {
@@ -121,6 +134,7 @@ function ready() {
   scrollspyHandler();
   konamiCode();
   gradesModal();
+  displayCaptcha();
 }
 
 
@@ -134,7 +148,7 @@ $(function(){
         onStart: {
           duration: 250, // Duration of our animation
           render: function ($container) {
-          
+            
             // Add your CSS animation reversing class
             $container.addClass('is-exiting');
             

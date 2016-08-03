@@ -212,6 +212,7 @@ img#index-image {
 }
 
 ul#index-navbar {
+  z-index: 10;
   position: relative;
   top: 0;
   text-align: center;
@@ -498,11 +499,18 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 
 /************** resume **************/
 
-.resume { text-align: center; }
+.resume { text-align: center; margin-top: 2em; }
 .resume a { text-decoration: none; color: #262626; transition: color 0.25s ease; }
 .resume a:hover { color: #48aa2e; }
+ 
+.resume-img img { width: 100%; }
 
 /************** contact **************/
+
+.alert {
+  padding: 5px 35px 7px 10px;
+  margin-bottom: 5px;
+}
 
 .vertical-bar {
   border: 0;
@@ -515,10 +523,6 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 
 textarea {
     resize: none;
-}
-
-.btn-submit, #captcha {
-  margin-top: 1em;
 }
 
 #contact-infos #title {
