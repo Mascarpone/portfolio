@@ -463,7 +463,12 @@ ul#school-list > li .school-description {
   height: 55%;
 }
 
-ul#school-list > li .school-results { font-weight: 600; }
+ul#school-list > li .school-results { 
+  position: absolute;
+  bottom: 15%;
+  left: 7%;
+  font-weight: 600; 
+}
 
 ul#school-list > li .school-projects { margin-top: -5px; }
 ul#school-list > li .school-projects > span { font-size: 12px; font-weight: 600; }

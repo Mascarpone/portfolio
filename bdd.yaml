@@ -1,28 +1,21 @@
 ---
 document: schools
 
-Schools:
+schools:
   - name: ENSEIRB-MATMECA
     date: 2014 - now
     img: enseirb.jpg
     summary: résumé
     description: description
     grades:
-    - period: semester 5
+    - period: Semester 5
       gradesfile: eirbS5
-    - period: semester 6
+    - period: Semester 6
       gradesfile: eirbS6
-    projects:
-      - project1
-      - project2
-      - project3
-      - project4
-      - project5
-      - project6
-      - project7
-      - project8
-      - project9
-      - project10
+    - period: Semester 7
+      gradesfile: eirbS7
+    - period: Semester 8
+      gradesfile: eirbS8
     color: 6f54a7
     corner-color: 947cc6
       
@@ -34,8 +27,6 @@ Schools:
     grades:
     - period: semester 5
       gradesfile: notesS5.txt
-    projects:
-      - project1
     color: dd2f54
     corner-color: fc7e99
     
@@ -47,8 +38,6 @@ Schools:
     grades:
     - period: semester 5
       gradesfile: notesS5.txt
-    projects:
-      - project1
     color: ffb94b
     corner-color: ffca78
     
@@ -60,8 +49,6 @@ Schools:
     grades:
     - period: semester 5
       gradesfile: notesS5.txt
-    projects:
-      - project1
     color: 4c6fe0
     corner-color: 7e9af5
     
@@ -73,17 +60,14 @@ Schools:
     grades:
     - period: semester 5
       gradesfile: notesS5.txt
-    projects:
-      - project1
     color: 49ac2e
     corner-color: 79d260
  
 --- 
 document: projects
  
-Projects:
-  
-  - name: project1
+projects:
+  - name: PlanetWars
     date: Jan 2015
     subject: sujet et contexte
     objectives: 
@@ -94,36 +78,105 @@ Projects:
     screenshots:
       - img1.png
       - front.png
-      
-  - name: project2
-    date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
-    links:
-      - caption: linkcaption
-        url: http://www.google.com/
-    screenshots:
-      - img1.png
-      
-  - name: project3
-    date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
-      - objectif2
-    links:
-      - caption: google
-        url: http://www.google.com/
-    screenshots:
-      - img1.png
-      
+
 ---
 document: eirbS5
+
+title: Computer Science
+header: Semester 5 (Sept 2014 - Feb 2015) 
+ranking: 9/105
+gpa: 3.67
+
+grades:
+  - name: Introduction to Algorithmic
+    mark: 10
+  - name: Data Structure and Algorithms (Trees)
+    mark: 9
+  - name: Automata and Formal Languages
+    mark: 15
+  - name: Information Theory
+    mark: 14
+  - name: Probability and Statistics
+    mark: 17
+  - name: Working Environment (Terminal, Shell ...)
+    mark: 15.2
+  - name: Computer Architecture
+    mark: 13.5
+  - name: Microprocessors
+    mark: 17.8
+  - name: Practical work on Microprocessors
+    mark: 17
+  - name: Imperative Programming
+    mark: 15
+  - name: PlanetWars (project in C)
+    mark: 16
+  - name: Quoridor (project in C)
+    mark: 14
+  - name: Introduction to Entrepreneurship
+    mark: 10.5
+  - name: English 
+    mark: 15.667
+  - name: Japanese
+    mark: 20
+  - name: Sport
+    mark: 15.5
 
 ---
 document: eirbS6
 
+title: Computer Science
+header: Semester 6 (Feb 2015 - Jul 2015) 
+ranking: 3/104
+gpa: 4.06
 
+grades:
+  - name: Logic and Program verification
+    mark: 16.5
+  - name: Data Structures and Algorithms (Graphs)
+    mark: 15
+  - name: Numerical Simulations and Solutions
+    mark: 13.33
+  - name: Functional Programming
+    mark: 18
+  - name: Imperative Programming and Software Development
+    mark: 14
+  - name: Abstract Data Types
+    mark: 17.5
+  - name: Introduction to Networks
+    mark: 11.75
+  - name: Penguins (project in C)
+    mark: 15
+  - name: Literal Calculation (project in Scheme)
+    mark: 15.5
+  - name: Company Environment Discovery
+    mark: 16.03
+  - name: Introduction to Project Management
+    mark: 18
+  - name: English
+    mark: 14.33
+  - name: Japanese
+    mark: 19.33
+  - name: Sport
+    mark: 15.5
 
-   
+---
+document: eirbS7
+
+title: Computer Science
+header: Semester 7 (Sept 2015 - Feb 2016) 
+ranking: 4/100
+gpa: 4.08
+
+grades:
+  
+---
+document: eirbS8
+
+title: Computer Science
+header: Semester 8 (Feb 2016 - Jul 2016) 
+ranking: 5/100
+gpa: 4.00
+
+grades:
+  
+  

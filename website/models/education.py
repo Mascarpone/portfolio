@@ -16,7 +16,7 @@ class Education(object):
         return yaml.dump(self.doc)
         
     def getSchools(self):
-        return self.doc["schools"]["Schools"]
+        return self.doc["schools"]["schools"]
         
     def getSchoolsNames(self): 
         return (s["name"] for s in self.getSchools())
@@ -28,7 +28,7 @@ class Education(object):
         return None
         
     def getProjects(self):
-        return self.doc["projects"]["Projects"]
+        return self.doc["projects"]["projects"]
         
     def getProjectsNames(self):
         return (p["name"] for p in self.getProjects())
