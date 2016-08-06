@@ -288,7 +288,7 @@ ul#index-navbar li {
 }
 
 .affix-top {
-  min-width:144px;
+  min-width:200px;
 }
 
 .affix {
@@ -330,7 +330,7 @@ ul#index-navbar li {
 .sublist {
   list-style: none;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-left: 0;
 }
 .sublist > li > a {

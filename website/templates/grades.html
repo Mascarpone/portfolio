@@ -1,5 +1,34 @@
 {% if grades %}
-  {{ grades }}
+  
+  <h3>{{ grades['title'] }}</h3>
+  <h4>{{ grades['header'] }}</h4>
+  <div class="pull-right">
+    <i>
+      Ranking: <b>{{ grades['ranking'] }}</b>
+      <br />
+      Equivalent GPA: <b>{{ grades['gpa'] }}</b>
+    </i>
+  </div>
+  
+  <br /><br /><br />
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Class name</th>
+        <th>Mark</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for grade in grades['grades'] %}
+      <tr>
+        <td>{{ grade['name'] }}</td>
+        <td>{{ grade['mark'] }}/20</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
 {% else %}  
   <img class="modal-img" src="{{ url_for('static', filename='images/modal.png') }}" />
 {% endif %}

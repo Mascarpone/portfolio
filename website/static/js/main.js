@@ -120,7 +120,7 @@ function scrollspyHandler() {
       var curr = activated.prev(); 
       while (curr.length > 0) {
         // check if the element pointed is at the same offset from the top of the document
-        if ($('#' + curr.text()).offset().top == $('#' + activated.text()).offset().top) { 
+        if ($('#' + curr.text().split(' ').join('_')).offset().top == $('#' + activated.text().split(' ').join('_')).offset().top) { 
           curr.addClass("active2");
         }
         curr = curr.prev();

@@ -28,7 +28,7 @@
   </div>
 </div>
 
-<div class="col-xs-12 col-md-10">
+<div class="col-xs-12 col-md-9 col-lg-10">
   
   <br />
   
@@ -42,12 +42,12 @@
     {% for school in schools %}
     <!-- adapting the color of each school -->
     <style>
-      ul#school-list > li#{{ school['name'] }} .front:before { border-color: #fff #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }}; background: #{{ school['corner-color'] }}; }
-      ul#school-list > li#{{ school['name'] }} .front { background-color: #{{ school['color'] }}; }
-      ul#school-list > li#{{ school['name'] }} .back:before { border-color: #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }} #{{ school['corner-color'] }}; }
-      ul#school-list > li#{{ school['name'] }} .back { background-color: #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front:before { border-color: #fff #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }}; background: #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front { background-color: #{{ school['color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back:before { border-color: #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }} #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back { background-color: #{{ school['corner-color'] }}; }
     </style>
-    <li id="{{ school['name'] }}">
+    <li id="{{ school['name'].replace(' ', '_') }}">
         <div class="front">
           <div class="school-period">{{ school['date'] }}</div>
           
@@ -80,7 +80,7 @@
     {% endfor %}
   </ul>
   
-  <br /><br />
+  <br />
   
   <div class="line">
     <div class="education-title" id="projects">Projects</div>
@@ -90,7 +90,7 @@
   
   <ul id="projects-list">
     {% for project in projects %}
-    <li class="project-container" id="{{ project['name'] }}">
+    <li class="project-container" id="{{ project['name'].replace(' ', '_')  }}">
       
       <div class="project-title">{{ project['name'] }}<span class="project-period">{{ project['date'] }}</span></div>
       
@@ -156,13 +156,13 @@
   </ul>
 </div>
 
-<nav class="col-md-2 hidden-sm hidden-xs" id="scrollspy">
+<nav class="col-md-3 col-lg-2 hidden-sm hidden-xs" id="scrollspy">
   <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="70">
     <li>
       <a href="#schools">Schools</a>
       <ul class="sublist">
         {% for sn in schoolsnames %}
-        <li><a href="#{{ sn }}">{{ sn }}</a></li>
+        <li><a href="#{{ sn.replace(' ', '_') }}">{{ sn }}</a></li>
         {% endfor %}
       </ul>
     </li>
@@ -170,7 +170,7 @@
       <a href="#projects">Projects</a>
       <ul class="sublist">
         {% for pn in projectsnames %}
-        <li><a href="#{{ pn }}">{{ pn }}</a></li>
+        <li><a href="#{{ pn.replace(' ', '_') }}">{{ pn }}</a></li>
         {% endfor %}
       </ul>
     </li>

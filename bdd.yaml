@@ -16,23 +16,12 @@ schools:
       gradesfile: eirbS7
     - period: Semester 8
       gradesfile: eirbS8
-    color: 6f54a7
-    corner-color: 947cc6
+    color: 4c6fe0
+    corner-color: 7e9af5
       
-  - name: TEST
-    date: 2014 - now
-    img: enseirb.jpg
-    summary: résumé
-    description: description
-    grades:
-    - period: semester 5
-      gradesfile: notesS5.txt
-    color: dd2f54
-    corner-color: fc7e99
-    
-  - name: TEST2
-    date: 2014 - now
-    img: enseirb.jpg
+  - name: Lycée Lakanal
+    date: 2012 - 2014
+    img: lakanal.jpg
     summary: résumé
     description: description
     grades:
@@ -41,33 +30,23 @@ schools:
     color: ffb94b
     corner-color: ffca78
     
-  - name: TEST3
-    date: 2014 - now
-    img: enseirb.jpg
+  - name: Lycée Jean Monnet
+    date: 2009 - 2012
+    img: ljm.png
     summary: résumé
     description: description
     grades:
     - period: semester 5
       gradesfile: notesS5.txt
-    color: 4c6fe0
-    corner-color: 7e9af5
+    color: dd2f54
+    corner-color: fc7e99
     
-  - name: TEST4
-    date: 2014 - now
-    img: enseirb.jpg
-    summary: résumé
-    description: description
-    grades:
-    - period: semester 5
-      gradesfile: notesS5.txt
-    color: 49ac2e
-    corner-color: 79d260
  
 --- 
 document: projects
  
 projects:
-  - name: PlanetWars
+  - name: Camera Pose Estimation
     date: Jan 2015
     subject: sujet et contexte
     objectives: 
@@ -76,8 +55,128 @@ projects:
       - caption: linkcaption
         url: http://www.google.com/
     screenshots:
-      - img1.png
+      - front.png   
+  
+  - name: Portfolio
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png  
+
+  - name: DominOS
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
       - front.png
+      
+  - name: Peer2Peer
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png
+
+  - name: C Exercises Online
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+    url: http://www.google.com/
+    screenshots:
+      - front.png
+        
+  - name: Re7
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png
+            
+  - name: DJ Compile
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png
+      
+  - name: FTP and SFTP Data Collection
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png 
+      
+  - name: Penguins
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png      
+
+  - name: Literal Expression Calculation
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png
+
+  - name: PlanetWars
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - TRIER LES PROJETS PAR ORDRE DE DATE DECROISSANT
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png
+      
+  - name: Quoridor
+    date: Jan 2015
+    subject: sujet et contexte
+    objectives: 
+      - objectif1
+    links:
+      - caption: linkcaption
+        url: http://www.google.com/
+    screenshots:
+      - front.png  
 
 ---
 document: eirbS5
@@ -168,7 +267,37 @@ ranking: 4/100
 gpa: 4.08
 
 grades:
-  
+  - name: Compilation
+    mark: 17
+  - name: Object Oriented Programming
+    mark: 10.5
+  - name: System Programming
+    mark: 19.5
+  - name: C++ Programming
+    mark: 15
+  - name: Distributed Algorithmic
+    mark: 15
+  - name: Web Applications
+    mark: 17
+  - name: Database Management System
+    mark: 13.5
+  - name: TCP/IP Networks Architecture
+    mark: 14.25
+  - name: Compilation Project (done in Python)
+    mark: 17.5
+  - name: DBMS Project (done in Python/HTML/CSS and using MySQL)
+    mark: 17
+  - name: OOP Project (done in Java)
+    mark: 16
+  - name: Software Engineering Project (done in Ruby/Slim/CSS/JS)
+    mark: 15.5
+  - name: Financial Analysis
+    mark: 10.5
+  - name: English
+    mark: 17.333
+  - name: Japanese
+    mark: 18.667
+      
 ---
 document: eirbS8
 
@@ -178,5 +307,53 @@ ranking: 5/100
 gpa: 4.00
 
 grades:
+  - name: 
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
+  - name:
+    mark:
   
   
