@@ -2,45 +2,50 @@
 document: schools
 
 schools:
+  - name: UCSC
+    date: 2016 - now
+    img: ucsc.png
+    summary: UC Santa Cruz is a public university like no other in California. I am spending here my last academic semester in the Computer Science department as an exchange student.
+    description: With my studies in the CS deparment of UCSC, I aim to specialize in the Robotics applicative field by learning about Artificial Intelligence and Machine Learning. I also take the opportunity to learn about specific topics that could somewhat be related to Robotics, about general culture in Computer Science and about working in an international environment with people from different cultures with different skills.
+    grades: 
+      - period: Semester 9
+        gradesfile: ucscS9
+    color: 49ac2e
+    corner-color: 79d260
+  
   - name: ENSEIRB-MATMECA
     date: 2014 - now
     img: enseirb.jpg
-    summary: résumé
-    description: description
+    summary: ENSEIRB-MATMECA is a public French Grande Ecole training engineers to take up the major challenges of the 21st century. I enrolled here in the Computer Science department.
+    description: The main objectives of the Computer Science department are to teach theoretical and technical foundations of computing, thus enabling its students to take part in project management and IT in the corporate world. At the end of their studies, the students dispose all the necessary skills for Software Development and have basis about some specific topics. I chose to study Information Theory, Distributed Systems, Security of Information Systems, Quantum Information and Robotics.
     grades:
-    - period: Semester 5
-      gradesfile: eirbS5
-    - period: Semester 6
-      gradesfile: eirbS6
-    - period: Semester 7
-      gradesfile: eirbS7
-    - period: Semester 8
-      gradesfile: eirbS8
+      - period: Semester 5
+        gradesfile: eirbS5
+      - period: Semester 6
+        gradesfile: eirbS6
+      - period: Semester 7
+        gradesfile: eirbS7
+      - period: Semester 8
+        gradesfile: eirbS8
     color: 4c6fe0
     corner-color: 7e9af5
       
   - name: Lycée Lakanal
     date: 2012 - 2014
     img: lakanal.jpg
-    summary: résumé
-    description: description
+    summary: The Lycée Lakanal is a French Higher School Preparatory Classes where I spent two very intensive years studying principally Mathematics and Physics.
+    description: The Preparatory Schools exist only in France and prepare their student to pass national contest to enter the very selective public Engineering Schools. The courses offered are very general but mainly focusing on Mathematics, Physics and Engineering Science. At the end of this school, I passed several national contests, I was ranked 954/5000 for the CCP and I was eligible for the Concours Mines-Ponts.
     grades:
-    - period: semester 5
-      gradesfile: notesS5.txt
+      - period: Semester 4
+        gradesfile: lakanalS4
+      - period: Semester 3
+        gradesfile: lakanalS3
+      - period: Semester 2
+        gradesfile: lakanalS2
+      - period: Semester 1
+        gradesfile: lakanalS1
     color: ffb94b
     corner-color: ffca78
-    
-  - name: Lycée Jean Monnet
-    date: 2009 - 2012
-    img: ljm.png
-    summary: résumé
-    description: description
-    grades:
-    - period: semester 5
-      gradesfile: notesS5.txt
-    color: dd2f54
-    corner-color: fc7e99
-    
  
 --- 
 document: projects
@@ -56,6 +61,7 @@ projects:
         url: http://www.google.com/
     screenshots:
       - front.png   
+      - ucsc.png
   
   - name: Portfolio
     date: Jan 2015
@@ -177,7 +183,132 @@ projects:
         url: http://www.google.com/
     screenshots:
       - front.png  
+      - ucsc.png
 
+---
+document: ucscS9
+
+title: Computer Science
+header: Semester 9 - No grades yet ...
+  
+---
+document: eirbS8
+
+title: Computer Science
+header: Semester 8 (Feb 2016 - Jul 2016) 
+ranking: 5/100
+gpa: 4.00
+
+grades:
+  - name: Cryptology
+    mark: 14
+  - name: Computational Complexity Theory
+    mark: 19
+  - name: Advanced DBMS
+    mark: 14.1
+  - name: Operating System
+    mark: 15.5
+  - name: TCP/IP Applications
+    mark: 11.5
+  - name: Quantum Information
+    mark: 18
+  - name: Information Systems Security
+    mark: 14.6
+  - name: Introduction to Robotics and Machine Learning
+    mark: 15
+  - name: Operating System Project (done in C)
+    mark: 16.89
+  - name: Software Engineering Project part 2 (done in Ruby/Slim/CSS/JS)
+    mark: 14
+  - name: Networks Project 
+    mark: 14
+  - name: Project Management
+    mark: 12.5
+  - name: Quality Management System
+    mark: 16
+  - name: English
+    mark: 15
+  - name: Japanese
+    mark: 16.333
+
+---
+document: eirbS7
+
+title: Computer Science
+header: Semester 7 (Sept 2015 - Feb 2016) 
+ranking: 4/100
+gpa: 4.08
+
+grades:
+  - name: Compilation
+    mark: 17
+  - name: Object Oriented Programming
+    mark: 10.5
+  - name: System Programming
+    mark: 19.5
+  - name: C++ Programming
+    mark: 15
+  - name: Distributed Algorithmic
+    mark: 15
+  - name: Web Applications
+    mark: 17
+  - name: Database Management System
+    mark: 13.5
+  - name: TCP/IP Networks Architecture
+    mark: 14.25
+  - name: Compilation Project (done in Python)
+    mark: 17.5
+  - name: DBMS Project (done in Python/HTML/CSS and using MySQL)
+    mark: 17
+  - name: OOP Project (done in Java)
+    mark: 16
+  - name: Software Engineering Project (done in Ruby/Slim/CSS/JS)
+    mark: 15.5
+  - name: Financial Analysis
+    mark: 10.5
+  - name: English
+    mark: 17.333
+  - name: Japanese
+    mark: 18.667      
+
+---
+document: eirbS6
+
+title: Computer Science
+header: Semester 6 (Feb 2015 - Jul 2015) 
+ranking: 3/104
+gpa: 4.06
+
+grades:
+  - name: Logic and Program verification
+    mark: 16.5
+  - name: Data Structures and Algorithms (Graphs)
+    mark: 15
+  - name: Numerical Simulations and Solutions
+    mark: 13.33
+  - name: Functional Programming
+    mark: 18
+  - name: Imperative Programming and Software Development
+    mark: 14
+  - name: Abstract Data Types
+    mark: 17.5
+  - name: Introduction to Networks
+    mark: 11.75
+  - name: Penguins (project in C)
+    mark: 15
+  - name: Literal Calculation (project in Scheme)
+    mark: 15.5
+  - name: Company Environment Discovery
+    mark: 16.03
+  - name: Introduction to Project Management
+    mark: 18
+  - name: English
+    mark: 14.33
+  - name: Japanese
+    mark: 19.33
+  - name: Sport
+    mark: 15.5
+    
 ---
 document: eirbS5
 
@@ -221,139 +352,34 @@ grades:
     mark: 15.5
 
 ---
-document: eirbS6
+document: lakanalS4
 
-title: Computer Science
-header: Semester 6 (Feb 2015 - Jul 2015) 
-ranking: 3/104
-gpa: 4.06
-
-grades:
-  - name: Logic and Program verification
-    mark: 16.5
-  - name: Data Structures and Algorithms (Graphs)
-    mark: 15
-  - name: Numerical Simulations and Solutions
-    mark: 13.33
-  - name: Functional Programming
-    mark: 18
-  - name: Imperative Programming and Software Development
-    mark: 14
-  - name: Abstract Data Types
-    mark: 17.5
-  - name: Introduction to Networks
-    mark: 11.75
-  - name: Penguins (project in C)
-    mark: 15
-  - name: Literal Calculation (project in Scheme)
-    mark: 15.5
-  - name: Company Environment Discovery
-    mark: 16.03
-  - name: Introduction to Project Management
-    mark: 18
-  - name: English
-    mark: 14.33
-  - name: Japanese
-    mark: 19.33
-  - name: Sport
-    mark: 15.5
+title: MP
+header: Semester 4
+ranking: 
+gpa: 
 
 ---
-document: eirbS7
+document: lakanalS3
 
-title: Computer Science
-header: Semester 7 (Sept 2015 - Feb 2016) 
-ranking: 4/100
-gpa: 4.08
+title: MP
+header: Semester 3 
+ranking: 
+gpa: 
 
-grades:
-  - name: Compilation
-    mark: 17
-  - name: Object Oriented Programming
-    mark: 10.5
-  - name: System Programming
-    mark: 19.5
-  - name: C++ Programming
-    mark: 15
-  - name: Distributed Algorithmic
-    mark: 15
-  - name: Web Applications
-    mark: 17
-  - name: Database Management System
-    mark: 13.5
-  - name: TCP/IP Networks Architecture
-    mark: 14.25
-  - name: Compilation Project (done in Python)
-    mark: 17.5
-  - name: DBMS Project (done in Python/HTML/CSS and using MySQL)
-    mark: 17
-  - name: OOP Project (done in Java)
-    mark: 16
-  - name: Software Engineering Project (done in Ruby/Slim/CSS/JS)
-    mark: 15.5
-  - name: Financial Analysis
-    mark: 10.5
-  - name: English
-    mark: 17.333
-  - name: Japanese
-    mark: 18.667
-      
 ---
-document: eirbS8
+document: lakanalS2
 
-title: Computer Science
-header: Semester 8 (Feb 2016 - Jul 2016) 
-ranking: 5/100
-gpa: 4.00
-
-grades:
-  - name: 
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
-  - name:
-    mark:
+title: MPSI
+header: Semester 2
+ranking: 
+gpa: 
   
+---
+document: lakanalS1
+
+title: MPSI
+header: Semester 1 
+ranking: 
+gpa: 
   

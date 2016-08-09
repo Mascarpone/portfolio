@@ -2,6 +2,7 @@
   
   <h3>{{ grades['title'] }}</h3>
   <h4>{{ grades['header'] }}</h4>
+  {% if grades['grades'] %}
   <div class="pull-right">
     <i>
       Ranking: <b>{{ grades['ranking'] }}</b>
@@ -28,6 +29,7 @@
       {% endfor %}
     </tbody>
   </table>
+  {% endif %}
   
 {% else %}  
   <img class="modal-img" src="{{ url_for('static', filename='images/modal.png') }}" />

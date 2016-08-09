@@ -4,9 +4,6 @@ My portfolio website
 
 ## TODO
 
-- captcha google pour l'envoi du formulaire
-- completer l'exécution du formulaire sécurisée
-- resume
 - remplir bdd education
 - vérifier la compatibilité des différents navigateurs
 - compléter mon profil google+, facebook, github
