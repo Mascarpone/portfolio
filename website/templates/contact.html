@@ -24,7 +24,7 @@
       {% endif %}
     {% endwith %}
       
-    <form id="contact-form" data-toggle="validator" role=form method="POST" {% if other %}action="{{ url_for('contact') }}"{% else %}action="{{ url_for('contact', other=ok) }}"{% endif %} enctype="multipart/form-data">  
+    <form id="contact-form" data-toggle="validator" role=form method="POST" {% if other %}action="{{ url_for('contact') }}"{% else %}action="{{ url_for('contact', other='ok') }}"{% endif %} enctype="multipart/form-data">  
       {{ form.hidden_tag() }}
       {{ render_field(form.name, required="true") }}
       {{ render_field(form.email, required="true") }}

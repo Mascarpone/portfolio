@@ -39,7 +39,8 @@ def resume():
     return render_template('resume.html')
     
 @app.route("/contact", methods=["GET", "POST"])
-def contact(other=None): # the use of 'other' is a temporary solution for POST forms compatibility with smoothState
+@app.route("/contact/<string:other>", methods=["GET", "POST"]) # the use of 'other' is a temporary solution for POST forms compatibility with smoothState
+def contact(other=None): 
     form = ContactForm()
     if form.validate_on_submit():
         # check the recaptcha
