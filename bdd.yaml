@@ -52,33 +52,61 @@ document: projects
  
 projects:
   - name: Camera Pose Estimation
-    date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    date: Jun 2016 - Sept 2016
+    context: Following the program of the ENSEIRB-MATMECA, I spent a 3-month internship in the HyperVision Research Laboratory of Professor Saito Hideo at Keio University, Tokyo. The main objective of this internship was to discover the environment of a research laboratory while working on a specific subject about Computer Vision and Augmented-Mixed Reality.
+    subject: | 
+             Some applications of augmented or mixed reality find their basis in a network of cameras. The relative position estimation of the captured images is therefore needed to compute these kind of algorithms.
+             The main idea which solves this problem is to determine some keypoints on each frame and to match the same keypoints on the different cameras images. Then, the epipolar geometry theory is able to give the transformation between the different frames, which consists in a rotation and a translation.
+             However, if the cameras vision do not have any shared area or cannot find the same keypoints on their frames, this extrinsic calibration becomes impossible with these parameters. Shogo Miyata explains in his paper how the use of an additional omnidirectional camera can accurately solve this issue at a low price.
+             My work consisted in improving Miyata's work, implementing the theory and adding Automatic Feature Detection to the final program.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: HVRL
+        url: http://www.hvrl.ics.keio.ac.jp/laboratory/
+      - caption: Epipolar Geometry
+        url: https://www.robots.ox.ac.uk/~vgg/hzbook/hzbook1/HZepipolar.pdf
+      - caption: Camera Pose
+        url: http://graphics-r1.csail.mit.edu/sites/default/files/research/rephoto.pdf
+      - caption: Omnidirectional Camera
+        url: https://tel.archives-ouvertes.fr/tel-00996935v2/document
+      - caption: Feature Detection
+        url: http://docs.opencv.org/3.1.0/d7/d66/tutorial_feature_detection.html#gsc.tab=0
     screenshots:
-      - front.png   
-      - ucsc.png
+      - hvrl/hvrl.jpg   
+      - hvrl/theta.jpg
+      - hvrl/experiment.jpg
+      - hvrl/omniimg.jpg
+      - hvrl/reflection.jpg
+      - hvrl/result.jpg
   
   - name: Portfolio
-    date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    date: Jul 2016 - Aug 2016
+    context: In order to obtain my ENSEIRB-MATMECA diploma, a 6-month intership in a company is required at the end of the studies. Afterwards, I will be looking for a job. Thus, I wanted to present my working profile with an original media that fits to who I am, and a portfolio was the ideal solution.   
+    subject: |
+             The objective was to show my working profile with a design that I like and some of my drawings because it describes well who I am.
+             The website media gives me the opportunity to give more information about my education and the project I did than a CV.
+             Working on this website was also the opportunity to learn more about some web languages and technologies. 
+             For instance, I chose to use the Flask framework in Python, to add some effects with jQuery, to add the Google reCaptcha to the contact form etc.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Flask
+        url: http://flask.pocoo.org/
+      - caption: jQuery
+        url: https://jquery.com/
+      - caption: smoothState.js
+        url: https://github.com/miguel-perez/smoothState.js?files=1
+      - caption: jQuery Flip
+        url: https://nnattawat.github.io/flip/
+      - caption: Google reCaptcha
+        url: https://www.google.com/recaptcha/intro/index.html
+      - caption: Bootstrap
+        url: http://getbootstrap.com/
     screenshots:
-      - front.png  
+      - portfolio/index.jpg
+      - portfolio/education.jpg
 
   - name: DominOS
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -87,9 +115,8 @@ projects:
       
   - name: Peer2Peer
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -98,9 +125,8 @@ projects:
 
   - name: C Exercises Online
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
     url: http://www.google.com/
@@ -109,9 +135,8 @@ projects:
         
   - name: Re7
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -120,9 +145,8 @@ projects:
             
   - name: DJ Compile
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -131,9 +155,8 @@ projects:
       
   - name: FTP and SFTP Data Collection
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -142,9 +165,8 @@ projects:
       
   - name: Penguins
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -153,9 +175,8 @@ projects:
 
   - name: Literal Expression Calculation
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -164,9 +185,8 @@ projects:
 
   - name: PlanetWars
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - TRIER LES PROJETS PAR ORDRE DE DATE DECROISSANT
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -175,9 +195,8 @@ projects:
       
   - name: Quoridor
     date: Jan 2015
-    subject: sujet et contexte
-    objectives: 
-      - objectif1
+    context: 
+    subject: 
     links:
       - caption: linkcaption
         url: http://www.google.com/
@@ -197,6 +216,7 @@ document: eirbS8
 title: Computer Science
 header: Semester 8 (Feb 2016 - Jul 2016) 
 ranking: 5/100
+average: 15.217
 gpa: 4.00
 
 grades:
@@ -237,6 +257,7 @@ document: eirbS7
 title: Computer Science
 header: Semester 7 (Sept 2015 - Feb 2016) 
 ranking: 4/100
+average: 15.473
 gpa: 4.08
 
 grades:
@@ -277,6 +298,7 @@ document: eirbS6
 title: Computer Science
 header: Semester 6 (Feb 2015 - Jul 2015) 
 ranking: 3/104
+average: 15.498
 gpa: 4.06
 
 grades:
@@ -315,6 +337,7 @@ document: eirbS5
 title: Computer Science
 header: Semester 5 (Sept 2014 - Feb 2015) 
 ranking: 9/105
+average: 14.437
 gpa: 3.67
 
 grades:
@@ -355,31 +378,80 @@ grades:
 document: lakanalS4
 
 title: MP
-header: Semester 4
-ranking: 
-gpa: 
+header: Semester 4 (Jan 2014 - Jun 2014) 
+average: 11.87
+
+grades:
+  - name: Mathematics
+    mark: 10.6
+  - name: Physics
+    mark: 12.5
+  - name: Engineering Science
+    mark: 15.9
+  - name: French & Philosophy
+    mark: 9.5
+  - name: English
+    mark: 13.5
+  - name: Science Paper Presentation
+    mark: 13
 
 ---
 document: lakanalS3
 
 title: MP
-header: Semester 3 
-ranking: 
-gpa: 
+header: Semester 3 (Sept 2013 - Jan 2014) 
+average: 11.79
+
+grades:
+  - name: Mathematics
+    mark: 12.2
+  - name: Physics
+    mark: 9.8
+  - name: Engineering Science
+    mark: 12.9
+  - name: French & Philosophy
+    mark: 11
+  - name: English
+    mark: 13.8
+  - name: Science Paper Presentation
+    mark: 13
 
 ---
 document: lakanalS2
 
 title: MPSI
-header: Semester 2
-ranking: 
-gpa: 
+header: Semester 2 (Jan 2013 - Jun 2013) 
+average: 12.15  
+
+grades:
+  - name: Mathematics
+    mark: 12.7
+  - name: Physics
+    mark: 11
+  - name: Engineering Science
+    mark: 12.3
+  - name: French & Philosophy
+    mark: 11.8
+  - name: English
+    mark: 13.5
   
 ---
 document: lakanalS1
 
 title: MPSI
-header: Semester 1 
-ranking: 
-gpa: 
+header: Semester 1 (Sept 2012 - Jan 2013) 
+average: 11.27
+
+grades:
+  - name: Mathematics
+    mark: 11.7
+  - name: Physics
+    mark: 12
+  - name: Engineering Science
+    mark: 10.8
+  - name: French & Philosophy
+    mark: 8
+  - name: English
+    mark: 12.9
+    
   

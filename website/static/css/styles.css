@@ -493,13 +493,14 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 .project-container .project-title { font-size: 25px; font-weight: 500; position: relative; }
 .project-container .project-title .project-period { font-size: 12px; font-weight: normal; font-style: italic; position: absolute; right: 0; bottom: 0; }
 .project-container hr { margin-top: 0.5em; border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-.project-container .project-subject .project-links li:last-child:after { content: "."; }
-.project-container .project-subject .project-links li:after { content: ", "; }
-.project-container .objectives { list-style-type: disc; padding-left: 1em; }
+.project-links li { padding-right: 0; }
+.project-links li:last-child:after { content: "."; }
+.project-links li:after { content: ","; }
 
+.carousel { margin-bottom: 1em; }
 .carousel-control i { position: absolute; top: 50%; }
 .carousel-indicators li.active { background-color: #48aa2e; }
-.carousel-inner > .item > img { width: 100%; height: 200px; }
+.carousel-inner > .item > img { width: 100%; }
 
 
 /************** resume **************/

@@ -5,13 +5,21 @@
   {% if grades['grades'] %}
   <div class="pull-right">
     <i>
+      {% if grades['ranking'] %}
       Ranking: <b>{{ grades['ranking'] }}</b>
       <br />
+      {% endif %}
+      {% if grades['average'] %}
+      Average grade: <b>{{ grades['average'] }}/20</b>
+      <br />
+      {% endif %}
+      {% if grades['gpa'] %}
       Equivalent GPA: <b>{{ grades['gpa'] }}</b>
+      {% endif %}
     </i>
   </div>
   
-  <br /><br /><br />
+  <br /><br /><br /><br />
 
   <table class="table table-striped table-bordered">
     <thead>

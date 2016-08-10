@@ -6,8 +6,10 @@ My portfolio website
 
 - remplir bdd education
 - vérifier la compatibilité des différents navigateurs
-- compléter mon profil google+, facebook, github
+- vérifier mon anglais
 - compléter le readme
+- deployer 
+- compléter mon profil google+, facebook, github
 
 - BONUS: jolie page 404
 - BONUS: multi langage
