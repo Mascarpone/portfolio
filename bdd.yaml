@@ -104,14 +104,23 @@ projects:
       - portfolio/education.jpg
 
   - name: DominOS
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Apr 2016 - May 2016 
+    context: To complete the Operating System lectures I followed at the ENSEIRB-MATMECA, this project had the goal to make me manipulate system calls and understand a file system by using fuse.
+    subject: |
+             The goal was to develop a file system allowing to organize files (such as images or musics) by tags.
+             Using fuse, we could mount this file system on a specific directory that contains a .tags hidden file containing the database matching the files to their tags.
+             In the virtual file system, all the files are accessible in the root folder and every directory is a tag containing all the files that have this tag and all the directories corresponding to the other tags of these files.
+             For example, if the image toto.jpg has the tags foo and bar, then in the root folder you find the file toto.jpg and the folders foo and bar. In the foo folder you will find the file toto.jpg and the folder bar ... 
+             The usual bash commands allow the user to modify the tree structure of the system.
+             Moreover, several extensions could be implemented. In particular, I chose to provide a new system call handled with ioctl to print in the standard output the tags of the specified file. 
+             I also added the detection of the modifications in the source folder in order to adapt the virtual file system in real time (this uses inotify and needed to be used with a fork in the program).  
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Original subject
+        url: http://people.bordeaux.inria.fr/goglin/teaching/ProjetSysteme/tagfs/index.xhtml
+      - caption: Fuse
+        url: https://www.cs.hmc.edu/~geoff/classes/hmc.cs135.201109/homework/fuse/fuse_doc.html
     screenshots:
-      - front.png
+      - dominOS/example.jpg
       
   - name: Peer2Peer
     date: Jan 2015

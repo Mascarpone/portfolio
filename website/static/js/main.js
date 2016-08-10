@@ -132,7 +132,7 @@ function scrollspyHandler() {
 function ready() {
   schoolsAnimation();
   scrollspyHandler();
-  konamiCode();
+  //konamiCode();
   gradesModal();
   displayCaptcha();
 }

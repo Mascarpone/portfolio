@@ -10,6 +10,7 @@ My portfolio website
 - compléter le readme
 - deployer 
 - compléter mon profil google+, facebook, github
+- ajouter sur github les sources de mes projets si j'ai le droits
 
 - BONUS: jolie page 404
 - BONUS: multi langage
