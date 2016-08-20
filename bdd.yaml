@@ -122,35 +122,69 @@ projects:
     screenshots:
       - dominOS/example.jpg
       
-  - name: Peer2Peer
-    date: Jan 2015
-    context: 
-    subject: 
+  - name: NewTorrent
+    date: Apr 2016 - May 2016 
+    context: To complete the Network lectures at the ENSEIRB-MATMECA, the Computer Science students were asked to program a centralized Peer2Peer system in C and an oriented object language. My group and I decided to implement the Tracker in C and the Peers in C++.    
+    subject: |
+             In addition to the Peers, a Tracker known by all the clients had to be implemented. 
+             Following a simple protocole, the Tracker can help the Peers to find seeds and leeches in the network. Since a Peer knows where to download its missing file segments, it follows another simple protocole between Peers. 
+             Thus, this project focused on training us about using Sockets and Threads, following a strict protocole, manipulating a file system and working with a group of six members.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Original subject
+        url: https://docs.google.com/document/d/1BfxOFxFEg_u2H1JdQ1tFuR4dgp0Z8UvISHsogZ6ZslY/edit?ts=56b736d1  
+      - caption: Thread pool
+        url: https://en.wikipedia.org/wiki/Thread_pool
     screenshots:
-      - front.png
+      - p2p/schema.jpg
 
   - name: C Exercises Online
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Oct 2015 - May 2016
+    context: This project's purpose was to make my group understand the full process of a Software Engineering project. During a bit more than six months, we experienced the SCRUM method from the conception to the realisation of a real client's project.
+    subject: |
+             Our client was a Computer Science Professor wanting to provide his students an online platform in order to practice what they learn about the C programming language by doing some exercises.
+             The teacher had already implemented the structure and content of the website though it was only a presentation of the exercises instructions. Therefore, he wanted to add some features to improve his website.
+             The main goal was to allow the user to solve the exercises online instead of on his own computer in order that he focuses only on the programming language.
+             We had also to improve the design of the website, to clear the code for future developers, to make the website administration easier, write good documentation and make presentations about our work. 
+             In order to achieve our objectives we had to understand the previous code, the web languages we did not know and how an exercises could be compiled and run on the server by using Docker.
     links:
-      - caption: linkcaption
-    url: http://www.google.com/
+      - caption: Actual website
+        url: https://thor.enseirb-matmeca.fr:4443
+      - caption: Docker
+        url: https://www.docker.com/
+      - caption: Sinatra
+        url: http://www.sinatrarb.com/
+      - caption: Bootstrap
+        url: http://getbootstrap.com/
+      - caption: jQuery
+        url: https://jquery.com/
     screenshots:
-      - front.png
+      - cexos/ecran_accueil_initial.jpg
+      - cexos/web_accueil.jpg
+      - cexos/ecran_exercice_initial.jpg
+      - cexos/editeur.jpg
+      - cexos/diag_seq.jpg
         
   - name: Re7
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Oct 2015 - Dec 2015
+    context: This project was one of the suggested projects to Computer Science students at ENSEIRB-MATMECA to evaluate them about their knowledge on DBMS. In addition, the user interface was evaluated for the first time in this school so it was the opportuniy to learn this topic by ourselves and have fun about it.
+    subject: |
+             In this Database Management System project, we are invited to create a database to manage a recipe site for ENSEIRB-MATMECA students. 
+             The objective is to implement, on a practical case, the concepts and methods seen in the DBMS module.
+             The project starts with data modeling and results in the creation of a relational database and the implementation of a certain number of transactions (consultations, updates, ranking, etc.).
+             My group and I decided to offer an entire recipe website as the one you can find recently on the web. We used the Flask microframework and the MySQL DBMS.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Flask
+        url: http://flask.pocoo.org/
+      - caption: jQuery
+        url: https://jquery.com/
+      - caption: Bootstrap
+        url: http://getbootstrap.com/
+      - caption: MySQL
+        url: https://www.mysql.com/
     screenshots:
-      - front.png
+      - re7/logo.jpg
+      - re7/index.jpg
+      - re7/EntiteAssociation.jpg
             
   - name: DJ Compile
     date: Jan 2015
@@ -210,8 +244,7 @@ projects:
       - caption: linkcaption
         url: http://www.google.com/
     screenshots:
-      - front.png  
-      - ucsc.png
+      - front.png 
 
 ---
 document: ucscS9
