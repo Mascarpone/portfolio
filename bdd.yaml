@@ -165,7 +165,7 @@ projects:
       - cexos/diag_seq.jpg
         
   - name: Re7
-    date: Oct 2015 - Dec 2015
+    date: Nov 2015 - Dec 2015
     context: This project was one of the suggested projects to Computer Science students at ENSEIRB-MATMECA to evaluate them about their knowledge on DBMS. In addition, the user interface was evaluated for the first time in this school so it was the opportuniy to learn this topic by ourselves and have fun about it.
     subject: |
              In this Database Management System project, we are invited to create a database to manage a recipe site for ENSEIRB-MATMECA students. 
@@ -187,64 +187,109 @@ projects:
       - re7/EntiteAssociation.jpg
             
   - name: DJ Compile
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Nov 2015 - Dec 2015
+    context: In order to practice what we had learned about Compilation in our second year at the ENSEIRB-MATMECA, the Computer Science students were invited to create a more or less complicated compiler. The goal of this project was to provide a new language very close to the C that could be translated by our program into LLVM and then compiled with clang. My partner and I decided to use the tool PLY in Python to make our compiler. 
+    subject: |
+             The DJ_Compil project is an attempt to create a compiler for a C-like programming language supporting automatic vectorization and parallelization for operations over arrays, like map() and reduce(). 
+             Pyvain and I decided to use a test-driven development method to realise this goal as everything is very dependent in Lex and Yacc and, therefore, needs to be well specified and organized.
+             Our final work only consists in the basis of the dj language. It provides the lexical and syntax analysis and some usefull functions such as map() and reduce(). The vectorization and parallelization were not implemented.
+             If you are intersted, please feel free to contribute and improve this project!
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Original subject 
+        url: http://www.labri.fr/perso/barthou/projet_compil15/projet.html
+      - caption: Git Repository
+        url: https://github.com/Mascarpone/DJ_Compil
+      - caption: PLY
+        url: http://www.dabeaz.com/ply/
+      - caption: LLVM
+        url: http://llvm.org/docs/LangRef.html
     screenshots:
-      - front.png
+      - dj/sample.jpg
+      - dj/llvm.jpg
       
   - name: FTP and SFTP Data Collection
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Jul 2015 - Aug 2015
+    context: At the end of my first year at the ENSEIRB-MATMECA, I did an internship in the IT office of AS24, a subsidiary of TOTAL. This internship had the objective to make me discover the "working wolrd" though I take the opportunity to work directly about programming.  
+    subject: |
+             My work in AS24 consisted in different tasks. First, I had to collect and send data from automatas around the world through FTP and SFTP with a C# program that I realised from scratch using Visual Studio.
+             Then, I needed to process these data in order to input them into the company Oracle database using PL/SQL.
+             This internship made me discover the IT environment in a quite big company. Moreover I learned about multithreading, scheduling, database and the .NET framework.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: AS24
+        url: https://www.as24.com/
+      - caption: Oracle
+        url: http://www.oracle.com/technetwork/database/features/plsql/index.html
+      - caption: .NET Framework
+        url: https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx
     screenshots:
-      - front.png 
-      
-  - name: Penguins
-    date: Jan 2015
-    context: 
-    subject: 
-    links:
-      - caption: linkcaption
-        url: http://www.google.com/
-    screenshots:
-      - front.png      
+      - as24/as24.jpg
+      - as24/programme.jpg
+      - as24/automate.jpg
+      - as24/schema.jpg
 
   - name: Literal Expression Calculation
-    date: Jan 2015
-    context: 
-    subject: 
+    date: Feb 2015 - May 2015
+    context: During my first year at the ENSEIRB-MATMECA, I followed a class of functional programming based on the Scheme (one of the Lisp dialects). This project was the opportunity to test a functional approach for the first time and to do a project about Mathematics instead of a game.
+    subject: |
+             The purpose of this project was to implement the symbolic derivation and the simplification of mathematical expressions in a functional language. 
+             By consequence, we had to find a convenient structure to describe an expression and to think about recursive functional methods to implement.
+             It was a very interesting challenge as we always used imperative programming languages before.
     links:
-      - caption: linkcaption
-        url: http://www.google.com/
+      - caption: Scheme Wiki
+        url: https://en.wikipedia.org/wiki/Scheme_(programming_language)
+      - caption: Computer Algebra System
+        url: https://en.wikipedia.org/wiki/Computer_algebra_system
     screenshots:
-      - front.png
-
-  - name: PlanetWars
-    date: Jan 2015
-    context: 
-    subject: 
-    links:
-      - caption: linkcaption
-        url: http://www.google.com/
-    screenshots:
-      - front.png
+      - functional/expr.jpg
+      - functional/trad.jpg
+      - functional/composition.jpg
+      - functional/sample.jpg
       
-  - name: Quoridor
-    date: Jan 2015
-    context: 
-    subject: 
+  - name: MiniGames
+    date: Nov 2014 - Jun 2015
+    context: During my first year in the Bordeaux Engineering School ENSEIRB-MATMECA, I learned the basics of programming. In order to practice, I was asked to realise some games in C but I also made some games in C# to prepare my internship and get used to OOP. 
+    subject: |
+             I implemented in team projects some simple games in C in order to practice the data structures and all the features of the language. 
+             Thus, I created a computer version of the boardgames Quoridor and Penguins. I also worked on a strategy to the game PlanetWars which was a challenge proposed by Google some years before.
+             To get prepared for my internship, I implemented from scratch copies of the games FlappyBird and 2048 in C# using Visual Studio. 
     links:
-      - caption: linkcaption
+      - caption: Quoridor
+        url: http://en.gigamic.com/game/quoridor
+      - caption: Penguins
+        url: https://www.trictrac.net/jeu-de-societe/pingouins
+      - caption: PlanetWars
+        url: http://aigamedev.com/open/tutorial/planetwars-guide/
+      - caption: FlappyBird
         url: http://www.google.com/
+      - caption: 2048
+        url: https://gabrielecirulli.github.io/2048/
     screenshots:
-      - front.png 
+      - minigames/quoridor.jpg
+      - minigames/penguins.jpg
+      - minigames/planetWars.jpg
+      
+  - name: PageRank Study
+    date: Sept 2013 - Apr 2014
+    context: One of the tests of the Concours aux Grandes Ecoles in France is the presentation of a specific subject related to an annual topic. This year the shared topic was transfers and exchanges ; I chose to work about the PageRank, the ranking criteria invented by the founders of Google at its beginning.
+    subject: |
+             This work consisted principally in collecting and understanding research papers and scientific documents describing the subject and the mathematics theories about it.
+             With the help of my teacher, I was able to understand the important points and to implement this PageRank myself with Maple. 
+             Finally, I applied this algorithm to the graph of the Parisian subway to elect the most important stations in the French capital.
+    links:
+      - caption: PageRank Wiki
+        url: https://en.wikipedia.org/wiki/PageRank
+      - caption: Michael Eisermann Paper
+        url: http://www.igt.uni-stuttgart.de/eiserm/enseignement/google-promenade.pdf
+      - caption: TIPE Wiki
+        url: https://fr.wikipedia.org/wiki/Travail_d%27initiative_personnelle_encadr%C3%A9
+      - caption: Maple
+        url: http://www.maplesoft.com/products/Maple/
+    screenshots:
+      - pagerank/webgraph.jpg
+      - pagerank/formula.jpg
+      - pagerank/algo1.jpg
+      - pagerank/algo2.jpg
+      - pagerank/subway.jpg
 
 ---
 document: ucscS9
