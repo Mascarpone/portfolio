@@ -1,21 +1,6 @@
-# portfolio
+# PORTFOLIO
+
 My portfolio website
-
-
-## TODO
-
-- remplir bdd education
-- vérifier la compatibilité des différents navigateurs
-- vérifier mon anglais
-- compléter le readme
-- deployer 
-- compléter mon profil google+, facebook, github
-- ajouter sur github les sources de mes projets si j'ai le droits
-
-- BONUS: jolie page 404
-- BONUS: multi langage
-- BONUS: generation automatique des données depuis le pdf/latex du cv
-- BONUS: code konami -> photos de vacances en mozaique avec un morceau de la mozaique qui permet de retourner sur le site
 
 ## Version
 
@@ -23,44 +8,35 @@ My portfolio website
 
 ## Installation prerequisities
 
-* Un système Unix
+* A Unix OS
 
-* Une base de données MySQL à laquelle se connecter
+* Python with `pip` : `sudo apt-get install python-pip`
 
-* La bibliothèque `libmysqlclient-dev`, obtenable classiquement avec `sudo apt-get install libmysqlclient-dev`
+* The virtual environment manager for python `virtualenv`. Installed by default with the latest verions of python, but available, if it is not already installed, using your favorite package manager, as `python-virtualenv` or via` pip`.
 
-* Python avec le gestionnaire de modules python `pip` : `sudo apt-get install python-pip`
-
-  Si besoin, une procédure d'installation plus détaillée de pip peut être trouvée ici : http://pip.readthedocs.org/en/stable/installing/
-
-* Le gestionnaire d'environnement virtuel pour python `virtualenv`. Installé par défaut avec les dernières verions de python, mais disponible, s'il n'est pas déjà installé, via votre gestionnaire de paquet préféré, sous le nom `python-virtualenv`, ou via `pip`.
-
-  `sudo apt-get install python-virtualenv`
-
-  ou `sudo pip install virtualenv`
+  `sudo apt-get install python-virtualenv` or `sudo pip install virtualenv`
 
 ## Installation
 
-Placez vous dans un nouveau dossier dédié au portfolio. Nous l'appellerons `project_portfolio` dans la suite.
+Create a new folder dedicated to the portfolio. We will call it `project_portfolio` below.
 
-Décompressez l'archive du projet dans un sous-dossier `portfolio` ou clonez le dépôt du projet (privé pour l'instant) : `git clone https://github.com/Mascarpone/portfolio.git`
+Unpack the archive project in a subfolder `portfolio` or clone the project repository (private for now):` git clone https: // github.com / Mascarpone / portfolio.git`.
 
-Afin de ne pas installer les modules requis directement sur vôtre système, et de ne pas dépendre de la configuration actuelle de celui-ci, nous allons créer un environnement virtuel avec `virtualenv`. Pour cela, utilisez la commande suivante : `virtualenv venv`
+In order not to install the required modules directly on your system, and do not depend on the current configuration of it, we will create a virtual environment with `virtualenv`. Therefore, use the following command: `virtualenv venv`.
 
-Nous disposons donc maintenant d'un environnement situé dans le dossier `venv`. Pour le lancer, utilisez la commande : `. venv/bin/activate` (ne pas oublier le point seul au début)
+So we now have an environment in the `venv` folder. To launch it, use the command: `. venv/bin/activate` (do not forget the only point at first).
 
-Pour vous assurer de la bonne activation de l'environnement virtuel, vérifiez que l'invite de commande a bien été modifiée et commence maintenant par `(venv)`. Par exemple `(venv)utilisateur@machine:~/project_portfolio`
+To ensure the proper activation of the virtual environment, ensure the prompt has been changed and now begins with `(venv)`. For example `(venv)user@machine:~/project_portfolio`.
 
-Nous pouvons maintenant installer toutes les dépendances dans l'environnement virtuel : `pip install -r portfolio/requirements.txt` (il est possible que les droits d'administrateur soient requis pour cela)
+We can now install all dependencies in the virtual environment: `pip install -r portfolio/requirements.txt` (it is possible that administrator rights are required for this).
 
-Puis lancer le serveur : `python portfolio/app.py` (Utilisez Ctrl+C pour le quitter)
+Then start the server: `python portfolio/app.py` (Use Ctrl + C to quit).
 
-Le site portfolio est maintenant disponible à l'adresse http://localhost:8000
+The Portfolio site is now available at http://localhost:8000.
 
-Pour quitter l'environnement virtuel, Utilisez la commande `deactivate`
+To exit the virtual environment, use the command `deactivate`.
 
-
-## Un peu de lecture
+## Some references
 
 http://flask.pocoo.org/docs/0.10/quickstart/
 
