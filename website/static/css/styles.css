@@ -15,6 +15,7 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 85px; /* Margin bottom by footer height */
+  overflow: hidden;
 }
 
 body.modal-open { position: fixed; }
@@ -499,6 +500,7 @@ ul#school-list > li .school-projects > ul > li { padding: 0; margin: 0; }
 ul#school-list > li .school-projects > ul > li > a { font-size: 10px; color: #fff; text-decoration: underline; }
 ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none; }
 
+.modal-body { overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .modal .btn-group { width: 100%; }
 .modal .btn-select { width: 100%; text-align: left; }
 .modal .btn-select span.icon-right { position: absolute; top: 1em; right: 1em; }
@@ -698,6 +700,7 @@ textarea {
   #captcha {transform:scale(0.6);-webkit-transform:scale(0.6);transform-origin:0 0;-webkit-transform-origin:0 0;}
   .project-period, .project-toggle { display: none; }
   .project-xxs { display: block; }
+  .project-xl, .project-toggle { display: none; }
   .project-container .project-title { font-size: 18px; border: 1px solid #ccc; border-radius: 5px; padding: 2px 8px; -webkit-transition: background-color 300ms;-moz-transition: background-color 300ms;-o-transition: background-color 300ms;transition: background-color 300ms; }
   .project-container .project-title:hover { background-color: #58b93e; cursor: pointer; -webkit-transition: background-color 300ms;-moz-transition: background-color 300ms;-o-transition: background-color 300ms;transition: background-color 300ms; }
   .project-container { margin: 1em 0 0 0; }
@@ -707,7 +710,6 @@ textarea {
   .navbar-default .navbar-nav > li > a.nav-education:hover, .navbar-default .navbar-nav > li.active > a.nav-education { background-color: #3c9724;}
   .navbar-default .navbar-nav > li > a.nav-resume:hover, .navbar-default .navbar-nav > li.active > a.nav-resume { background-color: #ffb94b;}
   .navbar-default .navbar-nav > li > a.nav-contact:hover, .navbar-default .navbar-nav > li.active > a.nav-contact { background-color: #45b0c2;}
-
 }
 
 @media (min-width: 400px) {
