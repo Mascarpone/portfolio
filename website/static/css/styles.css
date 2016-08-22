@@ -499,7 +499,9 @@ ul#school-list > li .school-projects > ul > li { padding: 0; margin: 0; }
 ul#school-list > li .school-projects > ul > li > a { font-size: 10px; color: #fff; text-decoration: underline; }
 ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none; }
 
-.modal { overflow-y: scroll; }
+.modal { overflow: none; max-height: none; }
+.modal .modal-body { max-height: 420px; overflow-y: auto; }
+
 .modal .btn-group { width: 100%; }
 .modal .btn-select { width: 100%; text-align: left; }
 .modal .btn-select span.icon-right { position: absolute; top: 1em; right: 1em; }
