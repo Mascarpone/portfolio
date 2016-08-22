@@ -15,7 +15,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 85px; /* Margin bottom by footer height */
-  overflow: hidden;
 }
 
 body.modal-open { position: fixed; }
