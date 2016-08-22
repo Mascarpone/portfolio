@@ -30,8 +30,14 @@
       {{ render_field(form.email, required="true") }}
       {{ render_field(form.obj, required="true") }}
       {{ render_field(form.text, required="true", rows="5") }}
-      <div id="captcha" class="pull-left"></div>
-      <button id="contact-form-submit" type="submit" class="btn btn-warning btn-lg btn-submit pull-right disabled" title="Check the Google reCaptcha to enable">Submit</button>
+      <div class="row">
+        <div class="col-xs-6">
+          <div id="captcha" class="pull-left"></div>
+        </div>
+        <div class="col-xs-6">
+          <button id="contact-form-submit" type="submit" class="btn btn-warning btn-lg btn-submit pull-right disabled" title="Check the Google reCaptcha to enable">Submit</button>
+        </div>
+      </div>
     </form>
     
   </div>

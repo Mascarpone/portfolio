@@ -1,3 +1,11 @@
+// Project list for small devices
+function toggleProject() {
+  $('.project-title').click(function() {
+    $(this).parent().find('.project-toggle').slideToggle();
+    $(this).find('.fa').toggleClass('rotated');
+  });
+}
+
 // display the captcha for the form
 function displayCaptcha() {
   if ($('#captcha').length != 0 && typeof grecaptcha !== 'undefined') {
@@ -135,6 +143,7 @@ function ready() {
   //konamiCode();
   gradesModal();
   displayCaptcha();
+  toggleProject();
 }
 
 
@@ -183,5 +192,7 @@ $(function(){
       smoothState = $page.smoothState(options).data('smoothState');
       
       ready();
+      
+      
 });
 

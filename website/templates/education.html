@@ -79,11 +79,20 @@
   
   <ul id="projects-list">
     {% for project in projects %}
-    <li class="project-container" id="{{ project['name'].replace(' ', '_')  }}">
+    <li class="project-container" id="{{ project['name'].replace(' ', '_') }}">
       
-      <div class="project-title">{{ project['name'] }}<span class="project-period">{{ project['date'] }}</span></div>
+      <div class="project-title">
+        {{ project['name'] }}
+        <span class="project-period">{{ project['date'] }}</span>
+        <div class="pull-right project-xxs"><i class="fa fa-chevron-left"></i></div>
+      </div>
       
+      <div class="project-toggle">  
       <hr />
+      <div class="project-xxs">
+        <i>{{ project['date'] }}</i>
+        <br /><br />
+      </div>
       
       <div class="row">
         
@@ -135,7 +144,7 @@
           {% endfor %}
         </ul>
       </div>
-        
+    </div>
     </li>
     {% endfor %}
   </ul>
