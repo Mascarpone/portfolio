@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block head %}
-  <title>flevern - {% block title %}{% endblock %}</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="portfolio, flevern, Florian, Enseirb, Informatique, Le Vern">
-  <meta name="description" content="Florian Le Vern Portfolio">
-  <meta name="author" content="flevern">
-  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='css/keyframes.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='css/transitions.css') }}" rel="stylesheet">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-  {% endblock %}
-</head>
+  <head>
+    {% block head %}
+    <title>flevern - {% block title %}{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="portfolio, flevern, Florian, Enseirb, Informatique, Le Vern">
+    <meta name="description" content="Florian Le Vern Portfolio">
+    <meta name="author" content="flevern">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/keyframes.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/transitions.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    {% endblock %}
+  </head>
 
-{% set navigation_bar = [
-  ('/education', 'education', 'Education'),
-  ('/resume', 'resume', 'Resume'),
-  ('/contact', 'contact', 'Contact')
+  {% set navigation_bar = [
+    ('/education', 'education', 'Education'),
+    ('/resume', 'resume', 'Resume'),
+    ('/contact', 'contact', 'Contact')
   ] -%}
   {% set active_page = request.path|default('index') -%}
-      
-<body data-spy="scroll" data-target="#scrollspy" data-offset="15">
-      
+  
+  <body data-spy="scroll" data-target="#scrollspy" data-offset="15">
+    
     <div class="m-scene" id="transitions">
+      
       {% block header_navbar %}
-      <div class="container">
-        <div class="row">
+      <nav class="navbar navbar-default">
+        <div class="container">
           {% block header %}
-          <div class="col-xs-offset-1 col-xs-1 col-sm-offset-0">
-            <div class="noselect" id="title-container">
-              <a href="{{ url_for('index') }}">
-              <div id="halfclip">
-                <div class="halfcircle" id="clipped"></div>
-              </div>
-              <div class="halfcircle" id="fixed"></div>
-              <div id="text" class="noselect">
-                Flv
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="noselect" href="{{ url_for('index') }}">
+              <div id="title-container">
+                <div id="halfclip">
+                  <div class="halfcircle" id="clipped"></div>
+                </div>
+                <div class="halfcircle" id="fixed"></div>
+                <div id="text" class="noselect">
+                  Flv
+                </div>
               </div>
             </a>
-            </div>
           </div>
           {% endblock %}
-          
           {% block navbar %}
-          <div class="col-xs-offset-1 col-xs-9 col-sm-11 col-sm-offset-0">
-            <ul class="noselect" id="navbar">
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
               {% block navbar_list %}
               {% for route, view, caption in navigation_bar %}
               <li{% if route == active_page %} class="active"{% endif %}>
-              <a href="{{ url_for(view)|e }}" class="{{ view }}">{{ caption|e }}</a>
+              <a href="{{ url_for(view)|e }}" class="nav-{{ view }}">{{ caption|e }}</a>
             </li>
             {% endfor %}
             {% endblock %}
           </ul>
-        </div>
+        </div><!--/.nav-collapse -->
         {% endblock %}
       </div>
-    </div>
-    <hr style="margin-top:0px;" />
+    </nav>
+    <hr />
     {% endblock %}
+    
     
     {% block container %}
     <div class="container" id="content">
       <div class="scene_element scene_element--fadein">
-      {% block content %}
-      {% endblock %}
-    </div>
+        {% block content %}
+        {% endblock %}
+      </div>
     </div>
     {% endblock %}
     
@@ -90,15 +97,17 @@
       </div>
     </div>
     {% endblock %}
-  </div>
     
-    {% block scripts %}
-    <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.smoothState.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.flip.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=displayCaptcha" async defer></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    {% endblock %}
+  </div>
+  
+  {% block scripts %}
+  <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.smoothState.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.flip.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=displayCaptcha" async defer></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% endblock %}
+  
   </body>
-  </html>
+</html>

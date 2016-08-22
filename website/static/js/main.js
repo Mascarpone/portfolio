@@ -165,7 +165,7 @@ $(function(){
             smoothState.restartCSSAnimations();
             
             // Reverse default navbar animation before changing the page
-            $("ul#navbar li.active a").toggleClass("exiting");
+            $(".navbar-nav li.active a").toggleClass("exiting");
             
           }
         },
