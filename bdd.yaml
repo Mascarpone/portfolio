@@ -266,7 +266,7 @@ projects:
     screenshots:
       - minigames/quoridor.jpg
       - minigames/penguins.jpg
-      - minigames/planetWars.jpg
+      - minigames/planetwars.jpg
       
   - name: PageRank Study
     date: Sept 2013 - Apr 2014

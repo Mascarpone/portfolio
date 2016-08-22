@@ -20,7 +20,7 @@ My portfolio website
 
 Create a new folder dedicated to the portfolio. We will call it `project_portfolio` below.
 
-Unpack the archive project in a subfolder `portfolio` or clone the project repository (private for now):` git clone https: // github.com / Mascarpone / portfolio.git`.
+Unpack the archive project in a subfolder `portfolio` or clone the project repository (private for now): `git clone https://github.com/Mascarpone/portfolio.git`.
 
 In order not to install the required modules directly on your system, and do not depend on the current configuration of it, we will create a virtual environment with `virtualenv`. Therefore, use the following command: `virtualenv venv`.
 
@@ -43,3 +43,5 @@ http://flask.pocoo.org/docs/0.10/quickstart/
 http://jinja.pocoo.org/docs/dev/templates/
 
 http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf
+
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04
