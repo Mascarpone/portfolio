@@ -17,8 +17,6 @@ body {
   margin-bottom: 85px; /* Margin bottom by footer height */
 }
 
-body.modal-open { position: fixed; }
-
 html {
   min-height: 100%;
   position: relative;
