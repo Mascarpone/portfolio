@@ -141,7 +141,6 @@ function ready() {
   schoolsAnimation();
   scrollspyHandler();
   //konamiCode();
-  gradesModal();
   displayCaptcha();
   toggleProject();
 }
@@ -192,6 +191,7 @@ $(function(){
       smoothState = $page.smoothState(options).data('smoothState');
       
       ready();
+      gradesModal();
       
       
 });
