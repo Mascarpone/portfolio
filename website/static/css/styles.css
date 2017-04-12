@@ -611,11 +611,13 @@ textarea {
 
 .social li.circle.fb-icon { background-color: #3b5998; font-size: 1em; line-height: 60px;}
 .social li.circle.fb-icon span.name { margin-left: 3em; }
-.social li.circle.git-icon { background-color: #4078c0; font-size: 1.5em; line-height: 65px; }
+.social li.circle.git-icon { background-color: #333; font-size: 1.5em; line-height: 65px; }
 .social li.circle.git-icon i { padding-left: 1px; }
 .social li.circle.git-icon span.name { margin-left: 2.4em; }
 .social li.circle.gplus-icon { background-color: #db4437; font-size: 1em; line-height: 60px;}
 .social li.circle.gplus-icon span.name { margin-left: 2.4em; }
+.social li.circle.linkedin-icon { background-color: #007bb6; font-size: 1em; line-height: 57px;}
+.social li.circle.linkedin-icon span.name { margin-left: 2.9em; }
 
 .social li.circle:hover {
   background-color: #48aa2e; 
