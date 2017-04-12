@@ -3,7 +3,7 @@ document: schools
 
 schools:
   - name: UCSC
-    date: 2016 - now
+    date: 2016 - 2017
     img: ucsc.png
     summary: UC Santa Cruz is a public university like no other in California. I am spending here my last academic semester in the Computer Science department as an exchange student.
     description: With my studies in the CS deparment of UCSC, I aim to specialize in the Robotics applicative field by learning about Artificial Intelligence and Machine Learning. I also take the opportunity to learn about specific topics that could somewhat be related to Robotics, about general culture in Computer Science and about working in an international environment with people from different cultures with different skills.
@@ -14,7 +14,7 @@ schools:
     corner-color: 79d260
   
   - name: ENSEIRB-MATMECA
-    date: 2014 - now
+    date: 2014 - 2017
     img: enseirb.jpg
     summary: ENSEIRB-MATMECA is a public French Grande Ecole training engineers to take up the major challenges of the 21st century. I enrolled here in the Computer Science department.
     description: The main objectives of the Computer Science department are to teach theoretical and technical foundations of computing, thus enabling its students to take part in project management and IT in the corporate world. At the end of their studies, the students dispose all the necessary skills for Software Development and have basis about some specific topics. I chose to study Information Theory, Distributed Systems, Security of Information Systems, Quantum Information and Robotics.
@@ -51,13 +51,63 @@ schools:
 document: projects
  
 projects:
+  - name: Kaggle Competition
+    date: Mar 2017
+    context: At the end of the Machine Learning class at UCSC, I was asked to apply the knowledge I had acquired on a "real-world" project. Thus, I had to find and define an experimental project that would complete the weekly ones that we had to do during the quarter. I chose to tackle a Kaggle Competition about image recognition as my internship in Japan rose my interest in Computer Vision.
+    subject: | 
+             I chose the famous application project about supervised binary classification which objective is to determine pictures representing cats from pictures representing dogs.
+             From logistic, SVM and Neural Network that I studied in class, I wanted to find which classification method would produce the best outcome and optimize it to solve this specific problem.
+             My final release didn't get a good accuracy though I learned a lot from this hard first ML project, especially about Tensorflow Library and Convolutional Neural Networks. Thanks to my work in this class, the professor offered me to make a PhD with her. 
+             I am now even more interested in ML and I want to improve my skills in this field: it will begin with my 6-month internship at Mappy in Paris.  
+    links:
+      - caption: Competition Webpage
+        url: https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition
+      - caption: My Kernel
+        url: https://www.kaggle.com/flevern/dogs-vs-cats-redux-kernels-edition/tensorflow-starter-kit-fixed
+    screenshots:
+      - kaggle/contest.jpg
+      
+  - name: Fault Tolerant KVS
+    date: Jan 2016 - Mar 2017
+    context: My Distributed Systems class at UCSC had a running project along the quarter which goal was to implement a distributed fault tolerant and scalable Key-Value Store in teams of two. We had to submit one step of the implementation every two weeks.
+    subject: | 
+             The idea of this project was to use Docker to simulate a network of servers that would act like a distributed system that stores values associated to unique keys. 
+             To do so, my partner and I decided to implement a consistent hash ring where the data would be replicated on fixed-sized partitions. The addition or deletion of one node would trigger a reorganization of the partitions so that the ring keeps equilibrated.
+             Finally, our system worked fairly well except on one point (on which we would have liked to spend more time) that is the read-repair technique that would have allowed the system to be eventually consistent after a partition recovery.
+    links:
+      - caption: Original Subject
+        url: https://github.com/palvaro/CMPS128-Winter17/blob/master/homework4_spec.md
+      - caption: Docker
+        url: https://www.docker.com/
+    screenshots:
+      - dist/docker.jpg
+      - dist/hash.jpg  
+    
+  - name: AI Problems 
+    date: Sept 2016 - Mar 2017
+    context: The two AI classes that I took at UCSC made me practice basic to sophisticated techniques to implement in Python.
+    subject: | 
+             The two classes began with the basic search algorithms that I already knew before getting into specific topics of my interest.
+             Thus, I was introduced to Markov Decision Processes, Bayesian Networks, up to an introduction to Machine Learning (Reinforcement Learning, Linear Regression, SVM and Neural Networks).
+             More specificly in the game field, I discovered path finding using meshes, Monte Carlo Tree Search, Behavior Trees and Genetic Algorithms.
+             During the three months of each class, I had to put in application these theories on weekly projects. 
+    links:
+      - caption: Class Website
+        url: https://classes.soe.ucsc.edu/cmps140/Winter17/
+      - caption: Berkeley Contest
+        url: http://www-inst.eecs.berkeley.edu/~cs188/fa07/projects/contest/contest.html
+    screenshots:
+      - ai/pacman.jpg  
+      - ai/mesh.jpg
+      - ai/genetic.jpg
+    
   - name: Camera Pose Estimation
     date: Jun 2016 - Sept 2016
-    context: Following the program of the ENSEIRB-MATMECA, I spent a 3-month internship in the HyperVision Research Laboratory of Professor Saito Hideo at Keio University, Tokyo. The main objective of this internship was to discover the environment of a research laboratory while working on a specific subject about Computer Vision and Augmented-Mixed Reality.
+    context: Following the program at ENSEIRB-MATMECA, I spent a 3-month internship in the HyperVision Research Laboratory of Professor Saito Hideo at Keio University, Tokyo. The main objective of this internship was to discover the environment of a research laboratory while working on a specific subject about Computer Vision and Augmented-Mixed Reality.
     subject: | 
-             Some applications of augmented or mixed reality find their basis in a network of cameras. The relative position estimation of the captured images is therefore needed to compute these kind of algorithms.
-             The main idea which solves this problem is to determine some keypoints on each frame and to match the same keypoints on the different cameras images. Then, the epipolar geometry theory is able to give the transformation between the different frames, which consists in a rotation and a translation.
-             However, if the cameras vision do not have any shared area or cannot find the same keypoints on their frames, this extrinsic calibration becomes impossible with these parameters. Shogo Miyata explains in his paper how the use of an additional omnidirectional camera can accurately solve this issue at a low price.
+             Some applications of augmented or mixed reality find their basis in a network of cameras. The relative position estimation of the captured images is therefore needed to compute these kinds of algorithms.
+             The main idea which solves this problem is to determine some keypoints on each frame and to match the same keypoints on the different cameras' images. Then, the epipolar geometry theory is able to give the transformation between the different frames, which consists in a rotation and a translation.
+             However, if the cameras' vision do not have any shared area or cannot find the same keypoints on their frames, this extrinsic calibration becomes impossible with these parameters. Shogo Miyata explains in his paper how the use of an additional omnidirectional camera can accurately solve this issue at a low price.
              My work consisted in improving Miyata's work, implementing the theory and adding Automatic Feature Detection to the final program.
     links:
       - caption: HVRL
@@ -80,10 +130,10 @@ projects:
   
   - name: Portfolio
     date: Jul 2016 - Aug 2016
-    context: In order to obtain my ENSEIRB-MATMECA diploma, a 6-month intership in a company is required at the end of the studies. Afterwards, I will be looking for a job. Thus, I wanted to present my working profile with an original media that fits to who I am, and a portfolio was the ideal solution.   
+    context: In order to obtain my ENSEIRB-MATMECA diploma, a 6-month internship in a company is required at the end of the studies. Afterwards, I will be looking for a job. Thus, I wanted to present my working profile with an original media that fits who I am, and a portfolio was the ideal solution.   
     subject: |
              The objective was to show my working profile with a design that I like and some of my drawings because it describes well who I am.
-             The website media gives me the opportunity to give more information about my education and the project I did than a CV.
+             The website media gives me the opportunity to give more information about my education and the projects I did than a CV.
              Working on this website was also the opportunity to learn more about some web languages and technologies. 
              For instance, I chose to use the Flask framework in Python, to add some effects with jQuery, to add the Google reCaptcha to the contact form etc.
     links:
@@ -105,7 +155,7 @@ projects:
 
   - name: DominOS
     date: Apr 2016 - May 2016 
-    context: To complete the Operating System lectures I followed at the ENSEIRB-MATMECA, this project had the goal to make me manipulate system calls and understand a file system by using fuse.
+    context: To complete the Operating System lectures I followed at ENSEIRB-MATMECA, this project had the goal to make me manipulate system calls and understand a file system by using fuse.
     subject: |
              The goal was to develop a file system allowing to organize files (such as images or musics) by tags.
              Using fuse, we could mount this file system on a specific directory that contains a .tags hidden file containing the database matching the files to their tags.
@@ -124,10 +174,10 @@ projects:
       
   - name: NewTorrent
     date: Apr 2016 - May 2016 
-    context: To complete the Network lectures at the ENSEIRB-MATMECA, the Computer Science students were asked to program a centralized Peer2Peer system in C and an oriented object language. My group and I decided to implement the Tracker in C and the Peers in C++.    
+    context: To complete the Network lectures at ENSEIRB-MATMECA, the Computer Science students were asked to program a centralized Peer2Peer system in C and an oriented object language. My group and I decided to implement the Tracker in C and the Peers in C++.    
     subject: |
              In addition to the Peers, a Tracker known by all the clients had to be implemented. 
-             Following a simple protocole, the Tracker can help the Peers to find seeds and leeches in the network. Since a Peer knows where to download its missing file segments, it follows another simple protocole between Peers. 
+             Following a simple protocol, the Tracker can help the Peers to find seeds and leeches in the network. Since a Peer knows where to download its missing file segments, it follows another simple protocole between Peers. 
              Thus, this project focused on training us about using Sockets and Threads, following a strict protocole, manipulating a file system and working with a group of six members.
     links:
       - caption: Original subject
@@ -139,13 +189,13 @@ projects:
 
   - name: C Exercises Online
     date: Oct 2015 - May 2016
-    context: This project's purpose was to make my group understand the full process of a Software Engineering project. During a bit more than six months, we experienced the SCRUM method from the conception to the realisation of a real client's project.
+    context: This project's purpose was to make my group understand the full process of a Software Engineering project. During a bit more than six months, we experienced the SCRUM method from the conception to the realization of a real client's project.
     subject: |
-             Our client was a Computer Science Professor wanting to provide his students an online platform in order to practice what they learn about the C programming language by doing some exercises.
+             Our client was a Computer Science Professor wanting to provide his students with an online platform in order to practice what they learn about the C programming language by doing some exercises.
              The teacher had already implemented the structure and content of the website though it was only a presentation of the exercises instructions. Therefore, he wanted to add some features to improve his website.
-             The main goal was to allow the user to solve the exercises online instead of on his own computer in order that he focuses only on the programming language.
-             We had also to improve the design of the website, to clear the code for future developers, to make the website administration easier, write good documentation and make presentations about our work. 
-             In order to achieve our objectives we had to understand the previous code, the web languages we did not know and how an exercises could be compiled and run on the server by using Docker.
+             The main goal was to allow the user to solve the exercises online instead of on his own computer so that he can focuse only on the programming language.
+             We also had to improve the design of the website, to clear the code for future developers, to make the website administration easier, write good documentation and make presentations about our work. 
+             In order to achieve our objectives we had to understand the previous code, the web languages we did not know and how an exercise could be compiled and run on the server by using Docker.
     links:
       - caption: Actual website
         url: https://thor.enseirb-matmeca.fr:4443
@@ -171,7 +221,7 @@ projects:
              In this Database Management System project, we are invited to create a database to manage a recipe site for ENSEIRB-MATMECA students. 
              The objective is to implement, on a practical case, the concepts and methods seen in the DBMS module.
              The project starts with data modeling and results in the creation of a relational database and the implementation of a certain number of transactions (consultations, updates, ranking, etc.).
-             My group and I decided to offer an entire recipe website as the one you can find recently on the web. We used the Flask microframework and the MySQL DBMS.
+             My group and I decided to offer an entire recipe website like the ones you can find recently on the web. We used the Flask microframework and the MySQL DBMS.
     links:
       - caption: Flask
         url: http://flask.pocoo.org/
@@ -188,12 +238,12 @@ projects:
             
   - name: DJ Compile
     date: Nov 2015 - Dec 2015
-    context: In order to practice what we had learned about Compilation in our second year at the ENSEIRB-MATMECA, the Computer Science students were invited to create a more or less complicated compiler. The goal of this project was to provide a new language very close to the C that could be translated by our program into LLVM and then compiled with clang. My partner and I decided to use the tool PLY in Python to make our compiler. 
+    context: In order to practice what we had learned about Compilation in our second year at the ENSEIRB-MATMECA, the Computer Science students were invited to create a more or less complicated compiler. The goal of this project was to provide a new language very close to C that could be translated by our program into LLVM and then compiled with clang. My partner and I decided to use the tool PLY in Python to make our compiler. 
     subject: |
              The DJ_Compil project is an attempt to create a compiler for a C-like programming language supporting automatic vectorization and parallelization for operations over arrays, like map() and reduce(). 
-             Pyvain and I decided to use a test-driven development method to realise this goal as everything is very dependent in Lex and Yacc and, therefore, needs to be well specified and organized.
-             Our final work only consists in the basis of the dj language. It provides the lexical and syntax analysis and some usefull functions such as map() and reduce(). The vectorization and parallelization were not implemented.
-             If you are intersted, please feel free to contribute and improve this project!
+             Pyvain and I decided to use a test-driven development method to realize this goal as everything is very dependent in Lex and Yacc and, therefore, needs to be well specified and organized.
+             Our final work only consists in the basis of the dj language. It provides the lexical and syntax analysis and some useful functions such as map() and reduce(). The vectorization and parallelization were not implemented.
+             If you are interested, please feel free to contribute and improve this project!
     links:
       - caption: Original subject 
         url: http://www.labri.fr/perso/barthou/projet_compil15/projet.html
@@ -209,9 +259,9 @@ projects:
       
   - name: FTP and SFTP Data Collection
     date: Jul 2015 - Aug 2015
-    context: At the end of my first year at the ENSEIRB-MATMECA, I did an internship in the IT office of AS24, a subsidiary of TOTAL. This internship had the objective to make me discover the "working wolrd" though I take the opportunity to work directly about programming.  
+    context: At the end of my first year at ENSEIRB-MATMECA, I did an internship in the IT office of AS24, a subsidiary of TOTAL. This internship had the objective to make me discover the "working life" though I took the opportunity to work directly about programming.  
     subject: |
-             My work in AS24 consisted in different tasks. First, I had to collect and send data from automatas around the world through FTP and SFTP with a C# program that I realised from scratch using Visual Studio.
+             My work in AS24 consisted in different tasks. First, I had to collect and send data from automatas around the world through FTP and SFTP with a C# program that I realized from scratch using Visual Studio.
              Then, I needed to process these data in order to input them into the company Oracle database using PL/SQL.
              This internship made me discover the IT environment in a quite big company. Moreover I learned about multithreading, scheduling, database and the .NET framework.
     links:
@@ -229,9 +279,9 @@ projects:
 
   - name: Literal Expression Calculation
     date: Feb 2015 - May 2015
-    context: During my first year at the ENSEIRB-MATMECA, I followed a class of functional programming based on the Scheme (one of the Lisp dialects). This project was the opportunity to test a functional approach for the first time and to do a project about Mathematics instead of a game.
+    context: During my first year at ENSEIRB-MATMECA, I followed a class of functional programming based on Scheme (one of the Lisp dialects). This project was the opportunity to test a functional approach for the first time and to do a project about Mathematics instead of a game.
     subject: |
-             The purpose of this project was to implement the symbolic derivation and the simplification of mathematical expressions in a functional language. 
+             The purpose of this project was to implement the symbolic differentiation and the simplification of mathematical expressions in a functional language. 
              By consequence, we had to find a convenient structure to describe an expression and to think about recursive functional methods to implement.
              It was a very interesting challenge as we always used imperative programming languages before.
     links:
@@ -270,9 +320,9 @@ projects:
       
   - name: PageRank Study
     date: Sept 2013 - Apr 2014
-    context: One of the tests of the Concours aux Grandes Ecoles in France is the presentation of a specific subject related to an annual topic. This year the shared topic was transfers and exchanges ; I chose to work about the PageRank, the ranking criteria invented by the founders of Google at its beginning.
+    context: One of the tests of the Concours aux Grandes Ecoles in France is the presentation of a specific subject related to an annual topic. This year the shared topic was transfers and exchanges; I chose to work about the PageRank, the ranking criteria invented by the founders of Google at its beginning.
     subject: |
-             This work consisted principally in collecting and understanding research papers and scientific documents describing the subject and the mathematics theories about it.
+             This work consisted mainly in collecting and understanding research papers and scientific documents describing the subject and the mathematics theories about it.
              With the help of my teacher, I was able to understand the important points and to implement this PageRank myself with Maple. 
              Finally, I applied this algorithm to the graph of the Parisian subway to elect the most important stations in the French capital.
     links:
@@ -295,8 +345,23 @@ projects:
 document: ucscS9
 
 title: Computer Science
-header: Semester 9 - No grades yet ...
-  
+header: Semester 9 (Sept 2016 - Mar 2017) 
+gpa: 3.88
+
+grades:
+  - name: Machine Learning
+    mark: A+
+  - name: Artificial Intelligence
+    mark: A+
+  - name: Distributed Systems
+    mark: A-
+  - name: Game AI
+    mark: A-    
+  - name: Social Networks
+    mark: A+
+  - name: Intercultural Study
+    mark: A
+
 ---
 document: eirbS8
 
@@ -304,6 +369,7 @@ title: Computer Science
 header: Semester 8 (Feb 2016 - Jul 2016) 
 ranking: 5/100
 average: 15.217
+max: 20
 gpa: 4.00
 
 grades:
@@ -345,7 +411,8 @@ title: Computer Science
 header: Semester 7 (Sept 2015 - Feb 2016) 
 ranking: 4/100
 average: 15.473
-gpa: 4.08
+max: 20
+gpa: 4.00
 
 grades:
   - name: Compilation
@@ -386,7 +453,8 @@ title: Computer Science
 header: Semester 6 (Feb 2015 - Jul 2015) 
 ranking: 3/104
 average: 15.498
-gpa: 4.06
+max: 20
+gpa: 4.00
 
 grades:
   - name: Logic and Program verification
@@ -425,6 +493,7 @@ title: Computer Science
 header: Semester 5 (Sept 2014 - Feb 2015) 
 ranking: 9/105
 average: 14.437
+max: 20
 gpa: 3.67
 
 grades:
@@ -467,6 +536,7 @@ document: lakanalS4
 title: MP
 header: Semester 4 (Jan 2014 - Jun 2014) 
 average: 11.87
+max: 20
 
 grades:
   - name: Mathematics
@@ -488,6 +558,7 @@ document: lakanalS3
 title: MP
 header: Semester 3 (Sept 2013 - Jan 2014) 
 average: 11.79
+max: 20
 
 grades:
   - name: Mathematics
@@ -509,6 +580,7 @@ document: lakanalS2
 title: MPSI
 header: Semester 2 (Jan 2013 - Jun 2013) 
 average: 12.15  
+max: 20
 
 grades:
   - name: Mathematics
@@ -528,6 +600,7 @@ document: lakanalS1
 title: MPSI
 header: Semester 1 (Sept 2012 - Jan 2013) 
 average: 11.27
+max: 20
 
 grades:
   - name: Mathematics

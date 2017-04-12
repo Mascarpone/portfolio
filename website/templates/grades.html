@@ -10,11 +10,11 @@
       <br />
       {% endif %}
       {% if grades['average'] %}
-      Average grade: <b>{{ grades['average'] }}/20</b>
+      Average grade: <b>{{ grades['average'] }}{% if grades['max'] %}/{{ grades['max'] }}{% endif %}</b>
       <br />
       {% endif %}
       {% if grades['gpa'] %}
-      Equivalent GPA: <b>{{ grades['gpa'] }}</b>
+      GPA: <b>{{ grades['gpa'] }}</b>
       {% endif %}
     </i>
   </div>
@@ -32,7 +32,7 @@
       {% for grade in grades['grades'] %}
       <tr>
         <td>{{ grade['name'] }}</td>
-        <td>{{ grade['mark'] }}/20</td>
+        <td>{{ grade['mark'] }}{% if grades['max'] %}/{{ grades['max'] }}{% endif %}</td>
       </tr>
       {% endfor %}
     </tbody>

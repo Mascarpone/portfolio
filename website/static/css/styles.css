@@ -204,6 +204,10 @@ hr {
   border-top: solid 1px #262626;
 }
 
+#footer a {
+  color: #f3f3f3;
+}
+
 #footer-image {
   height: 45px;
 }
