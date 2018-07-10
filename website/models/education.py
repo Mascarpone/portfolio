@@ -1,13 +1,19 @@
 # -*- coding: utf-8 -*-
-from website import bdd
+import os
 import yaml 
+
+from website import bdd
+
+
 
 class Education(object):
     """ model parsing a yaml bdd concerning flevern's education """
     
     def __init__(self, bdd):
         self.doc = {}
-        with open(bdd, 'r') as documents:
+        bdd_path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), '..', '..', bdd)
+        with open(bdd_path, 'r') as documents:
             for data in yaml.load_all(documents):
                 self.doc[data["document"]] = data
         pass
