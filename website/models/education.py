@@ -11,8 +11,8 @@ class Education(object):
     
     def __init__(self, bdd):
         self.doc = {}
-        bdd_path = os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), '..', '..', bdd)
+        current_dir = os.path.dirname(os.path.realpath(__file__))
+        bdd_path = os.path.join(current_dir, '..', '..', bdd)
         with open(bdd_path, 'r') as documents:
             for data in yaml.load_all(documents):
                 self.doc[data["document"]] = data
