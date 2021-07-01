@@ -1,9 +1,4 @@
-- vérifier la compatibilité des différents navigateurs
-- vérifier mon anglais
-- compléter mon profil linkedin, facebook, github
-- ajouter sur github les sources de mes projets si j'ai le droits
-
-- BONUS: jolie page 404
-- BONUS: multi langage
-- BONUS: generation automatique des données depuis le pdf/latex du cv
-- BONUS: code konami -> photos de vacances en mozaique avec un morceau de la mozaique qui permet de retourner sur le site
+1. Generate the resume
+2. Multi languages: en, fr
+3. Cool 404 page
+4. Add a Konami code: display a mosaic of holidays pictures with one piece to return to the website

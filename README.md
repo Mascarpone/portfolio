@@ -1,47 +1,30 @@
-# PORTFOLIO
+# Portfolio
 
-My portfolio website
+My portfolio website.
+It describes my education, skills, career and inspirations.
 
-## Version
-
-1.0
 
 ## Installation prerequisities
 
-* A Unix OS
+ * A Unix OS
+ * Python with `pip` : `sudo apt-get install python-pip`
 
-* Python with `pip` : `sudo apt-get install python-pip`
-
-* The virtual environment manager for python `virtualenv`. Installed by default with the latest verions of python, but available, if it is not already installed, using your favorite package manager, as `python-virtualenv` or via` pip`.
-
-  `sudo apt-get install python-virtualenv` or `sudo pip install virtualenv`
 
 ## Installation
 
-Create a new folder dedicated to the portfolio. We will call it `project_portfolio` below.
+Install all dependencies with `pip install -r requirements.txt`.
 
-Unpack the archive project in a subfolder `portfolio` or clone the project repository (private for now): `git clone https://github.com/Mascarpone/portfolio.git`.
+The Portfolio webapp can run as a server with `python app.py` (Use Ctrl + C to quit). It is then available at http://localhost:8000.
 
-In order not to install the required modules directly on your system, and do not depend on the current configuration of it, we will create a virtual environment with `virtualenv`. Therefore, use the following command: `virtualenv venv`.
+Otherwise, it can be generated as a static website with `python static.py`. I use this way to publish it on GitHub Pages.
 
-So we now have an environment in the `venv` folder. To launch it, use the command: `. venv/bin/activate` (do not forget the only point at first).
+## Data
 
-To ensure the proper activation of the virtual environment, ensure the prompt has been changed and now begins with `(venv)`. For example `(venv)user@machine:~/project_portfolio`.
+My portfolio is very personal but one can use the template with his own data.
 
-We can now install all dependencies in the virtual environment: `pip install -r portfolio/requirements.txt` (it is possible that administrator rights are required for this).
+All the displayed data comes from the *bdd.yaml* file at the root of the repository.
 
-Then start the server: `python portfolio/app.py` (Use Ctrl + C to quit).
-
-The Portfolio site is now available at http://localhost:8000.
-
-To exit the virtual environment, use the command `deactivate`.
 
 ## Some references
 
-http://flask.pocoo.org/docs/0.10/quickstart/
-
-http://jinja.pocoo.org/docs/dev/templates/
-
-http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf
-
-https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04
+This website is using awesome community tools: [Flask](http://flask.pocoo.org/docs/0.10/quickstart/), [Jinja](http://jinja.pocoo.org/docs/dev/templates/) and [Bootstrap](https://getbootstrap.com/docs/3.4/getting-started/).
