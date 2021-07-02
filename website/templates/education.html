@@ -3,76 +3,75 @@
 {% block content %}
 
 <div class="col-xs-12 col-md-9 col-lg-10">
-  
+
   <br />
-  
+
   <div class="line">
     <div class="education-title" id="schools">Schools</div>
   </div>
-  
+
   <br />
-  
+
   <ul id="school-list" class="list-inline">
     {% for school in schools %}
-    <!-- adapting the color of each school -->
     <style>
-    ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front:before { border-color: #fff #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }}; background: #{{ school['corner-color'] }}; }
-    ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front { background-color: #{{ school['color'] }}; }
-    ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back:before { border-color: #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }} #{{ school['corner-color'] }}; }
-    ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back { background-color: #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front:before { border-color: #fff #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }}; background: #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .front { background-color: #{{ school['color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back:before { border-color: #fff #{{ school['corner-color'] }} #{{ school['corner-color'] }} #{{ school['corner-color'] }}; }
+      ul#school-list > li#{{ school['name'].replace(' ', '_') }} .back { background-color: #{{ school['corner-color'] }}; }
     </style>
     <li id="{{ school['name'].replace(' ', '_') }}">
       <div class="front">
         <div class="school-period">{{ school['date'] }}</div>
-        
+
         <div class="school-title">{{ school['name'] }}</div>
         <img class="school-img" src="{{ url_for('static', filename='images/'+school['img']) }}" alt="image de l'école avec logo" />
-        
+
         <div class="school-summary">{{ school['summary'] }}</div>
         <div class="showmore-button">Show more<i class="fa fa-chevron-left"></i></div>
       </div>
       <div class="back">
         <div class="school-description">{{ school['description'] }}</div>
-        
+
         <button type="button" data-toggle="modal" class="btn btn-warning school-results pull-right" data-target="#grades" data-school="{{ school['name'] }}" data-grades="{{ school['grades'] }}">Grades</button>
-        
+
         <div class="showmore-button">Show less<i class="fa fa-chevron-left"></i></div>
-        
+
       </div>
     </li>
     {% endfor %}
   </ul>
-  
+
   <br />
-  
+
   <div class="line">
     <div class="education-title" id="projects">Projects</div>
   </div>
-  
+
   <br />
-  
+
   <ul id="projects-list">
     {% for project in projects %}
     <li class="project-container" id="{{ project['name'].replace(' ', '_') }}">
-      
+
       <div class="project-title">
         {{ project['name'] }}
         <span class="project-period project-xl">{{ project['date'] }}</span>
         <div class="pull-right project-xxs"><i class="fa fa-chevron-left"></i></div>
       </div>
-      
-      <div class="project-toggle">  
+
+      <div class="project-toggle">
         <hr class="project-xl" />
         <div class="project-xxs">
           <br />
           <i>{{ project['date'] }}</i>
           <br /><br />
         </div>
-        
+
         <div class="row">
-          
+
           <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6 col-lg-5">
-            
+
             <div id="carousel-{{ project['name'].replace(' ', '_') }}" class="carousel slide screenshots" data-ride="carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -80,7 +79,7 @@
                 <li data-target="#carousel-{{ project['name'].replace(' ', '_') }}" data-slide-to="{{ project['screenshots'].index(ss) }}" {% if project['screenshots'].index(ss)==0 %}class="active"{% endif %}></li>
                 {% endfor %}
               </ol>
-              
+
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 {% for ss in project['screenshots'] %}
@@ -89,7 +88,7 @@
                 </div>
                 {% endfor %}
               </div>
-              
+
               <!-- Controls -->
               <a class="left carousel-control" href="#carousel-{{ project['name'].replace(' ', '_') }}" role="button" data-slide="prev">
                 <i class="fa fa-chevron-left fa"></i>
@@ -100,14 +99,14 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-            
+
           </div>
-          
+
           <div class="col-xs-12 col-sm-6 col-lg-7 project-subject">
             <div class="context">{{ project['context'] }}</div>
           </div>
         </div>
-        
+
         <div class="bs-callout bs-callout-warning">
           <h4>Subject</h4>
           {{ project['subject'] }}
@@ -149,5 +148,3 @@
 {% endblock %}
 
 <!-- NB: the modal block can be found in the layout.html file -->
-
-

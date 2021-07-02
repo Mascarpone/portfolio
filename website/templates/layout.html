@@ -24,11 +24,11 @@
     ('/contact', 'contact', 'Contact')
   ] -%}
   {% set active_page = request.path|default('index') -%}
-  
+
   <body data-spy="scroll" data-target="#scrollspy" data-offset="15">
-    
+
     <div class="m-scene" id="transitions">
-      
+
       {% block header_navbar %}
       <nav class="navbar navbar-default">
         <div class="container">
@@ -70,8 +70,8 @@
     </nav>
     <hr />
     {% endblock %}
-    
-    
+
+
     {% block container %}
     <div class="container" id="content">
       <div class="scene_element scene_element--fadein">
@@ -80,7 +80,7 @@
       </div>
     </div>
     {% endblock %}
-    
+
     {% block footer %}
     <div id="footer">
       <div class="container">
@@ -89,7 +89,7 @@
           <div class="col-md-4-offset-8">
             <p align="right">
               <img id="footer-image" class="noselect" src="{{ url_for('static', filename='images/miniporo.png') }}" alt=""/>
-              Hosted by <a href="http://www.pyvain.fr/" target="_blank">Pyvain</a> - Copyright &copy; 2017, Florian Le Vern
+              Copyright &copy; 2021, Florian Le Vern
             </p>
           </div>
         </div>
@@ -97,9 +97,9 @@
       </div>
     </div>
     {% endblock %}
-    
+
   </div>
-  
+
   {% block modal %}
   <div class="modal fade" id="grades" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -115,9 +115,9 @@
             </button>
             <ul class="dropdown-menu select-menu"></ul>
           </div>
-          
+
           <br /><br />
-          
+
           <div class="grades-body"></div>
         </div>
         <div class="modal-footer">
@@ -127,7 +127,7 @@
     </div>
   </div>
   {% endblock %}
-  
+
   {% block scripts %}
   <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/jquery.smoothState.min.js') }}"></script>
@@ -136,6 +136,6 @@
   <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=displayCaptcha" async defer></script>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   {% endblock %}
-  
+
   </body>
 </html>

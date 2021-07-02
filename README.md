@@ -16,7 +16,7 @@ Install all dependencies with `pip install -r requirements.txt`.
 
 The Portfolio webapp can run as a server with `python app.py` (Use Ctrl + C to quit). It is then available at http://localhost:8000.
 
-Otherwise, it can be generated as a static website with `python static.py`. I use this way to publish it on GitHub Pages.
+Otherwise, it can be generated as a static website with `python app_static.py`. I use this way to publish it on GitHub Pages.
 
 ## Data
 

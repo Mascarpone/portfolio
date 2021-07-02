@@ -10,7 +10,7 @@ class Data:
         current_dir = os.path.dirname(os.path.realpath(__file__))
         path = os.path.join(current_dir, "..", "..", data_filename)
         with open(path, "r") as documents:
-            for data in yaml.load_all(documents):
+            for data in yaml.safe_load_all(documents):
                 self.doc[data["document"]] = data
 
     def get_schools(self):

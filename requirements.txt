@@ -1,5 +1,6 @@
-Flask
-Flask-WTF
-Flask-Mail
 pyyaml
 requests
+Flask
+Flask-WTF[email]
+Flask-Mail
+Frozen-Flask
