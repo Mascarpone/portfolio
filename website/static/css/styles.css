@@ -75,14 +75,14 @@ h6 { font-size: .66em; }
 #title-container:hover #halfclip {
     animation: cliprotate 0.25s 1;
     transform: rotate(180deg);
-} 
+}
 
 #title-container .halfcircle {
   box-sizing: border-box;
   height: 100%;
   right: 0px;
   position: absolute;
-  border: solid 1.5px transparent;
+  border: solid 1px transparent;
   border-top-color: #262626;
   border-left-color: #262626;
   border-radius: 50%;
@@ -100,7 +100,7 @@ h6 { font-size: .66em; }
 
 #title-container #fixed {
   width: 100%;
-  transform: rotate(135deg);  
+  transform: rotate(135deg);
   opacity: 0;
   animation: deshowfixed 0.25s 1;
 }
@@ -127,7 +127,7 @@ h6 { font-size: .66em; }
 .navbar-default .navbar-nav > li {
   float: left;
   list-style: none;
-  padding-left: 20px; 
+  padding-left: 20px;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -163,7 +163,7 @@ h6 { font-size: .66em; }
   transition-timing-function: ease-in-out;
 }
 
-.navbar-default .navbar-nav > .active > a:before, 
+.navbar-default .navbar-nav > .active > a:before,
 .navbar-default .navbar-nav > .active > a:hover:before,
 .navbar-default .navbar-nav > li > a:hover:before {
   right: 80%;
@@ -179,10 +179,10 @@ h6 { font-size: .66em; }
 
 hr {
   margin-top: 0;
-  margin-bottom: 25px; 
-  border: 0; 
-  height: 1px; 
-  background: #333; 
+  margin-bottom: 25px;
+  border: 0;
+  height: 1px;
+  background: #333;
   background-image: linear-gradient(to right, #333, #ccc, #ccc);
 }
 
@@ -280,32 +280,32 @@ ul#index-navbar li {
 
 /************** education **************/
 
-.line { 
-  border-top: 1px solid #333; 
-  display: block; 
-  margin-top: 60px; 
-  padding-top: 50px; 
-  position: relative; 
+.line {
+  border-top: 1px solid #333;
+  display: block;
+  margin-top: 60px;
+  padding-top: 50px;
+  position: relative;
 }
 
-.education-title { 
-  display: block;  
-  position: absolute; 
-  bottom: 0px; 
-  left: 50%; 
+.education-title {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
   margin: -50px 0 0 -50px;
-  
-  height: 100px; 
-  width: 100px; 
-  border-radius: 50%; 
+
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
   border: 10px solid #fff;
   background: #262626;
-  
-  color: #fff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-size: 13px; 
-  text-align: center; 
-  text-transform: uppercase; 
+
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
   line-height: 82px;
 }
 
@@ -317,29 +317,29 @@ ul#index-navbar li {
   top: 20px;
 }
 
-.nav-pills { 
+.nav-pills {
   margin-top: 0;
   margin-left: 0;
 }
-.nav-pills > li > a { 
+.nav-pills > li > a {
   position: relative;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 500;
-  color: #767676; 
-  padding: 4px 20px; 
-  border-radius: 0; 
+  color: #767676;
+  padding: 4px 20px;
+  border-radius: 0;
 }
-.nav-pills > li > a:hover { 
-  color: #58b93e; 
-  background-color: transparent; 
-  border-left: 1px solid #58b93e; 
+.nav-pills > li > a:hover {
+  color: #58b93e;
+  background-color: transparent;
+  border-left: 1px solid #58b93e;
   padding-left: 19px;
 }
-.nav-pills > li.active > a { 
-  color: #48aa2e; 
+.nav-pills > li.active > a {
+  color: #48aa2e;
   font-weight: 700;
-  background-color: transparent; 
+  background-color: transparent;
   border-left: 2px solid #48aa2e;
   padding-left: 18px;
 }
@@ -356,22 +356,22 @@ ul#index-navbar li {
   padding-left: 0;
 }
 .sublist > li > a {
-  font-size: 12px; 
+  font-size: 12px;
   font-weight: 400;
-  color: #767676; 
+  color: #767676;
   text-decoration: none;
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 30px;
 }
-.sublist > li > a:hover { 
-  color: #58b93e; 
-  border-left: 1px solid #58b93e; 
+.sublist > li > a:hover {
+  color: #58b93e;
+  border-left: 1px solid #58b93e;
   padding-left: 29px;
 }
 .sublist > li.active > a,
-.sublist > li.active2 > a { 
-  color: #48aa2e; 
+.sublist > li.active2 > a {
+  color: #48aa2e;
   font-weight: 500;
   border-left: 2px solid #48aa2e;
   padding-left: 28px;
@@ -418,7 +418,7 @@ ul#school-list > li .front:before {
 ul#school-list > li .front {
   position: relative;
   background-color: #6f54a7;
-  padding: 1em 1.5em; 
+  padding: 1em 1.5em;
   transition: background-color 0.2s ease;
 }
 ul#school-list > li .back:hover:before {
@@ -441,7 +441,7 @@ ul#school-list > li .back:before {
 ul#school-list > li .back {
   position: relative;
   background-color: #947cc6;
-  padding: 1.5em 1.5em; 
+  padding: 1.5em 1.5em;
 }
 
 
@@ -485,11 +485,11 @@ ul#school-list > li .school-description {
   height: 55%;
 }
 
-ul#school-list > li .school-results { 
+ul#school-list > li .school-results {
   position: absolute;
   bottom: 15%;
   left: 7%;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 ul#school-list > li .school-projects { margin-top: -5px; }
@@ -538,7 +538,7 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 .resume { text-align: center; margin-top: 2em; }
 .resume a { text-decoration: none; color: #262626; transition: color 0.25s ease; }
 .resume a:hover { color: #48aa2e; }
- 
+
 .resume-img img { width: 100%; }
 
 /************** contact **************/
@@ -551,8 +551,8 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
 .vertical-bar {
   border: 0;
   width: 2px;
-  height: 400px; 
-  background: #eee; 
+  height: 400px;
+  background: #eee;
   background-image: linear-gradient(to bottom, #eee, #ccc, #eee);
   margin: auto;
 }
@@ -596,13 +596,13 @@ textarea {
 }
 .social li span.name { position: absolute; line-height: 50px; color: #262626; font-size: 16px; }
 .social li { margin-bottom: 10px; }
-.social li.circle { 
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
-  overflow: hidden; 
+.social li.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
   text-align: center;
-  
+
   -webkit-transition: background-color 300ms;
   -moz-transition: background-color 300ms;
   -o-transition: background-color 300ms;
@@ -620,7 +620,7 @@ textarea {
 .social li.circle.linkedin-icon span.name { margin-left: 2.9em; }
 
 .social li.circle:hover {
-  background-color: #48aa2e; 
+  background-color: #48aa2e;
   text-decoration: none;
   -webkit-transition: background-color 300ms;
   -moz-transition: background-color 300ms;
@@ -695,10 +695,10 @@ textarea {
 @media (max-width: 400px) {
   #title-container { width: 50px; height: 50px; margin-top: 4px; margin-left: 15px; }
   #title-container #text { font-size: 200%; top: -1px; left: -6px; }
-  #index-title { font-size: 110%; padding: 10px 0 0 0; } 
+  #index-title { font-size: 110%; padding: 10px 0 0 0; }
   ul#index-navbar { top: 0; }
   ul#index-navbar li { padding: 0 5px; }
-  #index-navbar a { font-size: 55%; } 
+  #index-navbar a { font-size: 55%; }
   #captcha {transform:scale(0.6);-webkit-transform:scale(0.6);transform-origin:0 0;-webkit-transform-origin:0 0;}
   .project-period, .project-toggle { display: none; }
   .project-xxs { display: block; }
@@ -719,10 +719,10 @@ textarea {
 @media (min-width: 400px) {
   #title-container { width: 50px; height: 50px; margin-top: 4px; margin-left: 15px; }
   #title-container #text { font-size: 200%; top: -1px; left: -6px; }
-  #index-title { font-size: 110%; padding: 10px 0 0 0; } 
+  #index-title { font-size: 110%; padding: 10px 0 0 0; }
   ul#index-navbar { top: 0; }
   ul#index-navbar li { padding: 0 5px; }
-  #index-navbar a { font-size: 55%; } 
+  #index-navbar a { font-size: 55%; }
   #captcha {transform:scale(0.6);-webkit-transform:scale(0.6);transform-origin:0 0;-webkit-transform-origin:0 0;}
   .project-xl, .project-toggle { display: none; }
   .project-xxs { display: block; }
@@ -739,11 +739,11 @@ textarea {
   .modal .modal-body { max-height: 420px; overflow-y: auto; }
 }
 
-@media (min-width: 500px) { 
+@media (min-width: 500px) {
   #title-container { width: 50px; height: 50px; margin-top: 4px; margin-left: 15px; }
   #title-container #text { font-size: 200%; top: -1px; left: -6px; }
-  #index-title { font-size: 180%; } 
-  #index-navbar a { font-size: 80%; } 
+  #index-title { font-size: 180%; }
+  #index-navbar a { font-size: 80%; }
   ul#index-navbar { top: 0; }
   ul#index-navbar li { padding: 15px; }
   #infos { margin-top: 20px; }

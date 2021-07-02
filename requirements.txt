@@ -1,5 +1,2 @@
-Flask
-Flask-WTF
-Flask-Mail
 pyyaml
-requests
+jinja2
