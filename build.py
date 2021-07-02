@@ -16,7 +16,7 @@ class Data:
         return self.doc["schools"]["schools"]
 
     def get_grades_documents(self):
-        return (g["gradesfile"] for g in s["grades"] for s in self.get_schools())
+        return (g["gradesfile"] for s in self.get_schools() for g in s["grades"])
 
     def get_projects(self):
         return self.doc["projects"]["projects"]
