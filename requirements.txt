@@ -1,6 +1,2 @@
 pyyaml
-requests
-Flask
-Flask-WTF[email]
-Flask-Mail
-Frozen-Flask
+jinja2

@@ -1,4 +1,4 @@
 .DS_Store
 *.pyc
-dev_vars.py
 venv/
+target/
