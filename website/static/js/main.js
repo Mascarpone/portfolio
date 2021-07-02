@@ -59,14 +59,14 @@ function gradesModal() {
 
     var modal = $(this);
     modal.find('.modal-title').text('Grades at ' + school);
-    modal.find('.grades-body').load('grades');
+    modal.find('.grades-body').load('grades.html');
     $.each(grades, function(index, value) {
       var obj = eval('(' + value + ')');
       modal.find('.select-menu').append('<li data-href="' + obj['gradesfile'] + '">' + obj['period'] + '</li>');
     });
 
     modal.find('.select-menu li').click(function() {
-      modal.find('.grades-body').load('grades/' + $(this).attr('data-href'));
+      modal.find('.grades-body').load('grades-' + $(this).attr('data-href') + '.html');
     });
   });
 

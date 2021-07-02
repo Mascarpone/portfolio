@@ -23,16 +23,29 @@ class Data:
 
 
 def build_static_website(data, src, dst):
-    pages = ["index", "education", "grades", "resume", "contact"]
-    vars = {
-        "template": "layout.html",
-        "schools": data.get_schools(),
-        "projects": data.get_projects(),
-    }
-
     env = Environment(loader=PackageLoader(src), autoescape=select_autoescape())
-    for p in pages:
-        env.get_template(f"{p}.html").stream(**vars).dump(f"{dst}/{p}.html")
+    env.get_template("index.html").stream(template="layout.html").dump(
+        f"{dst}/index.html"
+    )
+    env.get_template("resume.html").stream(template="layout.html").dump(
+        f"{dst}/resume.html"
+    )
+    env.get_template("contact.html").stream(template="layout.html").dump(
+        f"{dst}/contact.html"
+    )
+    env.get_template("education.html").stream(
+        template="layout.html",
+        schools=data.get_schools(),
+        projects=data.get_projects(),
+    ).dump(f"{dst}/education.html")
+    env.get_template("grades.html").stream().dump(f"{dst}/grades.html")
+    for school in data.get_schools():
+        for g in school["grades"]:
+            gradesfile = g["gradesfile"]
+            env.get_template("grades.html").stream(
+                template="layout.html",
+                grades=data.get_document(gradesfile),
+            ).dump(f"{dst}/grades-{gradesfile}.html")
 
 
 if __name__ == "__main__":
