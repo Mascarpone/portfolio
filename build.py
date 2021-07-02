@@ -15,6 +15,9 @@ class Data:
     def get_schools(self):
         return self.doc["schools"]["schools"]
 
+    def get_grades_documents(self):
+        return (g["gradesfile"] for g in s["grades"] for s in self.get_schools())
+
     def get_projects(self):
         return self.doc["projects"]["projects"]
 
@@ -24,28 +27,17 @@ class Data:
 
 def build_static_website(data, src, dst):
     env = Environment(loader=PackageLoader(src), autoescape=select_autoescape())
-    env.get_template("index.html").stream(template="layout.html").dump(
-        f"{dst}/index.html"
-    )
-    env.get_template("resume.html").stream(template="layout.html").dump(
-        f"{dst}/resume.html"
-    )
-    env.get_template("contact.html").stream(template="layout.html").dump(
-        f"{dst}/contact.html"
-    )
+    env.get_template("index.html").stream().dump(f"{dst}/index.html")
+    env.get_template("resume.html").stream().dump(f"{dst}/resume.html")
+    env.get_template("contact.html").stream().dump(f"{dst}/contact.html")
     env.get_template("education.html").stream(
-        template="layout.html",
-        schools=data.get_schools(),
-        projects=data.get_projects(),
+        schools=data.get_schools(), projects=data.get_projects()
     ).dump(f"{dst}/education.html")
     env.get_template("grades.html").stream().dump(f"{dst}/grades.html")
-    for school in data.get_schools():
-        for g in school["grades"]:
-            gradesfile = g["gradesfile"]
-            env.get_template("grades.html").stream(
-                template="layout.html",
-                grades=data.get_document(gradesfile),
-            ).dump(f"{dst}/grades-{gradesfile}.html")
+    for gradesdoc in data.get_grades_documents():
+        env.get_template("grades.html").stream(
+            grades=data.get_document(gradesdoc)
+        ).dump(f"{dst}/grades-{gradesdoc}.html")
 
 
 if __name__ == "__main__":
