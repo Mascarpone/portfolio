@@ -399,6 +399,7 @@ ul#school-list > li .front:hover:before {
 ul#school-list > li .front:before {
   content: "";
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   border-width: 0 16px 16px 0;
