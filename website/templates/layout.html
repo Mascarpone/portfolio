@@ -59,7 +59,7 @@
               {% block navbar_list %}
               {% for route, view, caption in navigation_bar %}
               <li{% if route == active_page %} class="active"{% endif %}>
-              <a href="{{ view }}.html" class="nav-{{ view }}">{{ caption|e }}</a>
+              <a href="{{ view }}.html" class="nav-{{ view }}">{{ caption }}</a>
             </li>
             {% endfor %}
             {% endblock %}
@@ -133,7 +133,6 @@
   <script src="static/js/jquery.smoothState.min.js"></script>
   <script src="static/js/jquery.flip.min.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=displayCaptcha" async defer></script>
   <script src="static/js/main.js"></script>
   {% endblock %}
 
