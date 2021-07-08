@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="portfolio, flevern, Florian, Enseirb, Informatique, Le Vern">
+    <meta name="keywords" content="portfolio, flevern, Florian, Enseirb, Mappy, Accenture, Petichef, Informatique, Le Vern">
     <meta name="description" content="Florian Le Vern Portfolio">
     <meta name="author" content="flevern">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,9 +19,9 @@
   </head>
 
   {% set navigation_bar = [
+    ('/career', 'career', 'Career'),
     ('/education', 'education', 'Education'),
-    ('/resume', 'resume', 'Resume'),
-    ('/contact', 'contact', 'Contact')
+    ('/interests', 'interests', 'Interests'),
   ] -%}
   {% set active_page = active_page|default('index') -%}
 
@@ -59,10 +59,16 @@
               {% block navbar_list %}
               {% for route, view, caption in navigation_bar %}
               <li{% if route == active_page %} class="active"{% endif %}>
-              <a href="{{ view }}.html" class="nav-{{ view }}">{{ caption }}</a>
-            </li>
-            {% endfor %}
-            {% endblock %}
+                <a href="{{ view }}.html" class="nav-{{ view }}">{{ caption }}</a>
+              </li>
+              {% endfor %}
+              {% endblock %}
+              <li>
+                <a target="_blank" href="static/images/cv.pdf" class="nav-resume">
+                  Resume
+                  <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
+                </a>
+              </li>
           </ul>
         </div><!--/.nav-collapse -->
         {% endblock %}
