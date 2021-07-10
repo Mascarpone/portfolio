@@ -18,11 +18,7 @@
     {% endblock %}
   </head>
 
-  {% set navigation_bar = [
-    ('/career', 'career', 'Career'),
-    ('/education', 'education', 'Education'),
-    ('/interests', 'interests', 'Interests'),
-  ] -%}
+  {% set navigation_bar = ['career', 'education', 'interests'] -%}
   {% set active_page = active_page|default('index') -%}
 
   <body data-spy="scroll" data-target="#scrollspy" data-offset="15">
@@ -57,9 +53,9 @@
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               {% block navbar_list %}
-              {% for route, view, caption in navigation_bar %}
-              <li{% if route == active_page %} class="active"{% endif %}>
-                <a href="{{ view }}.html" class="nav-{{ view }}">{{ caption }}</a>
+              {% for view in navigation_bar %}
+              <li{% if view == active_page %} class="active"{% endif %}>
+                <a href="{{ view }}.html" class="nav-{{ view }}">{{ view.capitalize() }}</a>
               </li>
               {% endfor %}
               {% endblock %}
