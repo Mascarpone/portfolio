@@ -12,6 +12,12 @@ class Data:
             for data in yaml.safe_load_all(documents):
                 self.doc[data["document"]] = data
 
+    def get_introduction(self):
+        return self.doc["introduction"].get("description")
+
+    def get_contacts(self):
+        return self.doc["introduction"].get("contacts")
+
     def get_schools(self):
         return self.doc["schools"]["schools"]
 
@@ -27,11 +33,13 @@ class Data:
 
 def build_static_website(data, src, dst):
     env = Environment(loader=PackageLoader(src), autoescape=select_autoescape())
-    env.get_template("index.html").stream().dump(f"{dst}/index.html")
-    env.get_template("resume.html").stream().dump(f"{dst}/resume.html")
-    env.get_template("contact.html").stream().dump(f"{dst}/contact.html")
+    env.get_template("index.html").stream(
+        introduction=data.get_introduction(),
+        contacts=data.get_contacts(),
+    ).dump(f"{dst}/index.html")
     env.get_template("education.html").stream(
-        schools=data.get_schools(), projects=data.get_projects()
+        schools=data.get_schools(),
+        projects=data.get_projects(),
     ).dump(f"{dst}/education.html")
     env.get_template("grades.html").stream().dump(f"{dst}/grades.html")
     for gradesdoc in data.get_grades_documents():
