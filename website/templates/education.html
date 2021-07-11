@@ -26,7 +26,7 @@
         <div class="school-period">{{ school['date'] }}</div>
 
         <div class="school-title">{{ school['name'] }}</div>
-        <img class="school-img" src="{{ 'static/images/' + school['img'] }}" alt="image de l'école avec logo" />
+        <img class="school-img" src="{{ 'static/images/schools/' + school['img'] }}" alt="image de l'école avec logo" />
 
         <div class="school-summary">{{ school['summary'] }}</div>
         <div class="showmore-button">Show more<i class="fa fa-chevron-left"></i></div>
@@ -85,7 +85,7 @@
               <div class="carousel-inner" role="listbox">
                 {% for ss in project['screenshots'] %}
                 <div class="item {% if project['screenshots'].index(ss)==0 %}active{% endif %}">
-                  <img src="{{ 'static/images/' + ss }}" alt="image not found">
+                  <img src="{{ 'static/images/projects/' + ss }}" alt="image not found">
                 </div>
                 {% endfor %}
               </div>

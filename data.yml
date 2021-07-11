@@ -10,6 +10,32 @@ contacts:
   mail: levern.florian.net@gmail.com
 
 ---
+document: career
+
+jobs:
+  - period: Since 2019
+    company: Accenture
+    logo: accenture.png
+    location: Paris, France
+    description:
+      - |
+        I did some stuff
+      - |
+        And some other stuff
+    certs:
+      - name: Professional Scrum Master
+        date: Feb. 2020
+      - name: Google Cloud Professional Architect
+        date: Jun. 2019
+  - period: 2017 - 2019
+    company: Mappy
+    logo: mappy.jpeg
+    location: Boulogne-Billancourt, France
+    description:
+      - |
+        Some cool things
+
+---
 document: projects
 
 projects:
