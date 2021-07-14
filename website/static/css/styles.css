@@ -175,8 +175,8 @@ h6 { font-size: .66em; }
 
 .navbar-default .navbar-nav > li > a.nav-career:before { background-color: #3c9724; }
 .navbar-default .navbar-nav > li > a.nav-education:before { background-color: #ffb94b; }
-.navbar-default .navbar-nav > li > a.nav-interests:before { background-color: #45b0c2; }
-.navbar-default .navbar-nav > li > a.nav-resume:before { background-color: #dc143c; }
+.navbar-default .navbar-nav > li > a.nav-interests:before { background-color: #dc143c; }
+.navbar-default .navbar-nav > li > a.nav-resume:before { background-color: #45b0c2; }
 
 hr {
   margin-top: 0;
@@ -727,7 +727,7 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
   padding: 0;
 }
 
-.card .desc {
+.desc {
   height: 100%;
   display: flex;
   align-items: center;
@@ -818,8 +818,8 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
   .navbar-default .navbar-nav > .active > a::before, .navbar-default .navbar-nav > .active > a:hover::before, .navbar-default .navbar-nav > li > a:hover::before { right: 100%; }
   .navbar-default .navbar-nav > li > a.nav-career:hover, .navbar-default .navbar-nav > li.active > a.nav-career { background-color: #3c9724; }
   .navbar-default .navbar-nav > li > a.nav-education:hover, .navbar-default .navbar-nav > li.active > a.nav-education { background-color: #ffb94b; }
-  .navbar-default .navbar-nav > li > a.nav-interests:hover, .navbar-default .navbar-nav > li.active > a.nav-interests { background-color: #45b0c2; }
-  .navbar-default .navbar-nav > li > a.nav-resume:hover, .navbar-default .navbar-nav > li.active > a.nav-resume { background-color: #dc143c; }
+  .navbar-default .navbar-nav > li > a.nav-interests:hover, .navbar-default .navbar-nav > li.active > a.nav-interests { background-color: #dc143c; }
+  .navbar-default .navbar-nav > li > a.nav-resume:hover, .navbar-default .navbar-nav > li.active > a.nav-resume { background-color: #45b0c2; }
   .modal { overflow: none; max-height: none; }
   .modal .modal-body { max-height: 420px; overflow-y: auto; }
 }
@@ -845,8 +845,8 @@ ul#school-list > li .school-projects > ul > li > a:hover { text-decoration: none
   .navbar-default .navbar-nav > .active > a::before, .navbar-default .navbar-nav > .active > a:hover::before, .navbar-default .navbar-nav > li > a:hover::before { right: 100%; }
   .navbar-default .navbar-nav > li > a.nav-career:hover, .navbar-default .navbar-nav > li.active > a.nav-career { background-color: #3c9724; }
   .navbar-default .navbar-nav > li > a.nav-education:hover, .navbar-default .navbar-nav > li.active > a.nav-education { background-color: #ffb94b; }
-  .navbar-default .navbar-nav > li > a.nav-interests:hover, .navbar-default .navbar-nav > li.active > a.nav-interests { background-color: #45b0c2; }
-  .navbar-default .navbar-nav > li > a.nav-resume:hover, .navbar-default .navbar-nav > li.active > a.nav-resume { background-color: #dc143c; }
+  .navbar-default .navbar-nav > li > a.nav-interests:hover, .navbar-default .navbar-nav > li.active > a.nav-interests { background-color: #dc143c; }
+  .navbar-default .navbar-nav > li > a.nav-resume:hover, .navbar-default .navbar-nav > li.active > a.nav-resume { background-color: #45b0c2; }
   .modal { overflow: none; max-height: none; }
   .modal .modal-body { max-height: 420px; overflow-y: auto; }
 }

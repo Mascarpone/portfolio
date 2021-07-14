@@ -8,9 +8,11 @@ contacts:
   github: https://github.com/Mascarpone
   linkedin: https://www.linkedin.com/in/flevern/
   mail: levern.florian.net@gmail.com
-me:
-  id: me.jpeg
-  logo: index.png
+me: index.png
+konami:
+  image: me.jpeg
+  message: |
+    🎉 Hey! You found my hiding place, here is the real me.
 
 ---
 document: career
