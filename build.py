@@ -13,7 +13,7 @@ class Data:
                 self.doc[data["document"]] = data
 
     def get_introduction(self):
-        return self.doc["introduction"].get("description")
+        return self.doc["introduction"]
 
     def get_contacts(self):
         return self.doc["introduction"].get("contacts")
@@ -30,6 +30,9 @@ class Data:
     def get_projects(self):
         return self.doc["projects"]["projects"]
 
+    def get_interests(self):
+        return self.doc["interests"]
+
     def get_document(self, docname):
         return self.doc.get(docname)
 
@@ -43,6 +46,9 @@ def build_static_website(data, src, dst):
     env.get_template("career.html").stream(
         jobs=data.get_jobs(),
     ).dump(f"{dst}/career.html")
+    env.get_template("interests.html").stream(
+        interests=data.get_interests(),
+    ).dump(f"{dst}/interests.html")
     env.get_template("education.html").stream(
         schools=data.get_schools(),
         projects=data.get_projects(),

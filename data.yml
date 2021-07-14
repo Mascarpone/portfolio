@@ -666,8 +666,9 @@ loved:
   - name: 🥘 cooking ... and eating
     image: food.jpeg
     description: |
-      I cook complicated dishes or cakes from time to time, a passion that I share with my mother and my brother.
-      We go around the good restaurants with my wife wherever we go.
+      I cook complicated dishes or cakes from time to time, a passion
+      that I share this passion with my mother and my brother. We go around the good
+      restaurants with my wife wherever we go.
   - name: ✈️ travelling
     image: onsen.jpeg
     description: |
@@ -679,10 +680,11 @@ loved:
       I do embroidery, drawing, painting ...
   - name: 🕹 games
     description: |
-      Having fun playing card games and video games with friends.
+      Having fun playing board games and video games with friends.
   - name: 💻 programming
     description: |
-      I started to create my own cooking app and I am thriving working on topics that are close to my heart.
+      I started to create my own cooking app and I am thriving working on topics
+      that are close to my heart.
 
 hated:
   - name: 🚬 cigarette smoke
