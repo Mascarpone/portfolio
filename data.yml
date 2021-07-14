@@ -658,35 +658,44 @@ grades:
 document: interests
 
 loved:
-  - name: 👩🏻 my wife above all
+  - emoji: 👩🏻
+    name: my wife above all
     image: her.png
     description: |
       We met in Keio during my internship in Japan, she followed me to France
       and has been bringing me daily happiness ever since.
-  - name: 🥘 cooking ... and eating
+  - emoji: 🥘
+    name: cooking ... and eating
     image: food.jpeg
     description: |
       I cook complicated dishes or cakes from time to time, a passion
       that I share this passion with my mother and my brother. We go around the good
       restaurants with my wife wherever we go.
-  - name: ✈️ travelling
+  - emoji: ✈️
+    name: travelling
     image: onsen.jpeg
     description: |
       I went to USA, Japan, China, Egypt, Great Britain ...
       I especially enjoy discovering Asia, its people and its food!
-  - name: 🙌🏻 manual activities
+  - emoji: 🙌🏻
+    name: manual activities
     image: embroidery.JPG
     description: |
       I do embroidery, drawing, painting ...
-  - name: 🕹 games
+  - emoji: 🕹
+    name: games
     description: |
       Having fun playing board games and video games with friends.
-  - name: 💻 programming
+  - emoji: 💻
+    name: programming
     description: |
       I started to create my own cooking app and I am thriving working on topics
       that are close to my heart.
 
 hated:
-  - name: 🚬 cigarette smoke
-  - name: 🚇 the parisian metro
-  - name: 🏃🏻 running
+  - emoji: 🚬
+    name: cigarette smoke
+  - emoji: 🚇
+    name: the parisian metro
+  - emoji: 🏃🏻
+    name: running
