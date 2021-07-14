@@ -4,43 +4,55 @@
 {% block content %}
 
 <div class="col-xs-12 timeline">
-  <ul class="dots"><li style="height: 1em;"></li></ul>
+  <ul class="dots">
+    <li style="height: 1em;"></li>
+  </ul>
 
   <ul>
     {% for job in jobs %}
     <li>
       <div class="time">{{ job['period'] }}</div>
       <div class="bullet">
-        <img class="noselect img-circle img-thumbnail" src="{{ 'static/images/career/' + job['logo'] }}" alt="" />
+        <img class="noselect img-circle img-thumbnail" src="{{ 'static/images/career/' + job['logo'] }}" alt="" title="{{ job['company'] }}" />
       </div>
-      <div class="desc">
+      <div class="title">
         <h3>{{ job['company'] }}</h3>
         <h4>{{ job['location'] }}</h4>
-        {% for info in job['description'] %}
-        <br />{{ info }}
-        {% endfor %}
-        <br /><br />
-        <div class="techno">
-          <img src="static/images/miniporo.png" alt="" />
-        </div>
       </div>
     </li>
 
-      {% for cert in job['certs'] %}
-      <li class="mini">
-        <div class="time">{{ cert['date'] }}</div>
-        <div class="bullet">
-          <div class="inner"></div>
-        </div>
-        <div class="desc"><h3>{{ cert['name'] }}</h3></div>
-      </li>
+    {% for cert in job['certs'] %}
+    <li class="mini">
+      <div class="time">{{ cert['date'] }}</div>
+      <div class="bullet">
+        <div class="inner"></div>
+      </div>
+      <div class="desc">
+        <h3>{{ cert['name'] }}</h3>
+      </div>
+      <img class="cert" src="{{ 'static/images/career/' + cert['logo'] }}" alt="" />
+    </li>
+    {% endfor %}
+
+    <li class="desc">
+      {% for info in job['description'] %}
+      👉🏻 {{ info }}<br />
       {% endfor %}
+    </li>
+
+    <li class="desc techno">
+      {% for techno in job['technos'] %}
+      <img src="{{ 'static/images/career/technos/' + techno + '.png' }}" alt="{{ techno }}" title="{{ techno }}" />
+      {% endfor %}
+    </li>
 
     <li class="spacer"></li>
     {% endfor %}
   </ul>
 
-  <ul class="dots"><li style="height: 1em;"></li></ul>
+  <ul class="dots">
+    <li style="height: 1em;"></li>
+  </ul>
 </div>
 
 {% endblock %}

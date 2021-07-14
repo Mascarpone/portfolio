@@ -18,7 +18,7 @@ konami:
 document: career
 
 jobs:
-  - period: Since 2019
+  - period: 2019 - Today
     company: Accenture
     logo: accenture.png
     location: Paris, France
@@ -28,17 +28,52 @@ jobs:
       - |
         And some other stuff
     certs:
+      - name: GitLab Certified Associate
+        date: May 2021
+        logo: gitlab.png
+      - name: TOGAF® 9 Foundation
+        date: May 2021
+        logo: togaf.png
       - name: Professional Scrum Master
         date: Feb. 2020
+        logo: scrum.png
       - name: Google Cloud Professional Architect
         date: Jun. 2019
+        logo: gcp.png
+    technos:
+      - java
+      - spring
+      - maven
+      - gitlab
+      - jenkins
+      - docker
+      - ansible
+      - aws
+      - gcp
+      - jira
   - period: 2017 - 2019
     company: Mappy
-    logo: mappy.jpeg
+    logo: mappy.png
     location: Boulogne-Billancourt, France
     description:
-      - |
-        Some cool things
+      - Internship and then hired as a developer.
+      - Active participation in the Scrum method, preparation of sprint plannings, scrums of scrum, JIRAs.
+      - In charge of the evolution and maintenance of 4 search engine APIs using Apache Solr.
+      - Conception and development of the auto-completion, making the use of this service rise from 35% in August 2017 to 64% in June 2018.
+      - Establishment of internal tools for testing, statistics and monitoring.
+      - Organization and redesign of data update processes with developments in JAVA and SQL.
+      - As a DevOps, evolution of internal scripts of continuous integration and continuous delivery.
+      - Technology watch, competitive studies and knowledge transfer on the principles and uses of Machine Learning.
+      - Acquired skills in geomatics, I became a contributor to the open data project OpenStreetMap and participated in events about geography (Foss4g, SOTM).
+    technos:
+      - python
+      - postgres
+      - jenkins
+      - puppet
+      - elk
+      - solr
+      - jira
+      - openstreetmap
 
 ---
 document: projects
