@@ -29,8 +29,8 @@
       </div>
       <div class="desc">
         <h3>{{ cert['name'] }}</h3>
+        <img class="cert" src="{{ 'static/images/career/' + cert['logo'] }}" alt="" />
       </div>
-      <img class="cert" src="{{ 'static/images/career/' + cert['logo'] }}" alt="" />
     </li>
     {% endfor %}
 
@@ -41,9 +41,11 @@
     </li>
 
     <li class="desc techno">
+      <ul class="list-inline">
       {% for techno in job['technos'] %}
-      <img src="{{ 'static/images/career/technos/' + techno + '.png' }}" alt="{{ techno }}" title="{{ techno }}" />
+      <li><img src="{{ 'static/images/career/technos/' + techno + '.png' }}" alt="{{ techno }}" title="{{ techno }}" /></li>
       {% endfor %}
+      </ul>
     </li>
 
     <li class="spacer"></li>
