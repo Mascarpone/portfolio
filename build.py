@@ -24,6 +24,9 @@ class Data:
     def get_jobs(self):
         return self.doc["career"]["jobs"]
 
+    def get_diploma(self):
+        return self.doc["schools"]["diploma"]
+
     def get_schools(self):
         return self.doc["schools"]["schools"]
 
@@ -47,6 +50,7 @@ def build_static_website(data, src, dst):
         "contacts": data.get_contacts(),
         "jobs": data.get_jobs(),
         "interests": data.get_interests(),
+        "diploma": data.get_diploma(),
         "schools": data.get_schools(),
         "projects": data.get_projects(),
     }

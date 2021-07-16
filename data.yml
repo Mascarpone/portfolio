@@ -372,6 +372,7 @@ projects:
 ---
 document: schools
 
+diploma: Computer Science Engineer - 2nd of the promotion
 schools:
   - name: UCSC
     date: 2016 - 2017
@@ -387,7 +388,6 @@ schools:
   - name: ENSEIRB-MATMECA
     date: 2014 - 2017
     img: enseirb.jpg
-    diploma: certified.png
     summary: ENSEIRB-MATMECA is a public French Grande Ecole training engineers to take up the major challenges of the 21st century. I enrolled here in the Computer Science department.
     description: The main objectives of the Computer Science department are to teach theoretical and technical foundations of computing, thus enabling its students to take part in project management and IT in the corporate world. At the end of their studies, the students dispose all the necessary skills for Software Development and have basis about some specific topics. I chose to study Information Theory, Distributed Systems, Security of Information Systems, Quantum Information and Robotics.
     grades:

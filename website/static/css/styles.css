@@ -640,11 +640,6 @@ ul#school-list > li .school-summary {
   font-size: 11px;
   height: 20%;
 }
-ul#school-list > li .diploma-img {
-  width: 6em;
-  position: absolute;
-  left: -1em;
-}
 ul#school-list > li .showmore-button {
   position: absolute;
   bottom: 5%;
